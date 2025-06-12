@@ -24,7 +24,7 @@ const Input: React.FC<InputProps> = ({
   disabled = false,
 }) => {
   return (
-    <div className="m-[8px]">
+    <div className="mx-[10px] my-[8px]">
       <label
         htmlFor={id}
         className="mb-0 block text-sm font-bold text-gray-700"
