@@ -7,7 +7,7 @@ interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
   value: string;
   checked?: boolean;
   disabled?: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const RadioButton: React.FC<RadioButtonProps> = ({
