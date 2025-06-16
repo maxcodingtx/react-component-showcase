@@ -44,7 +44,7 @@ const HomePage = (): JSX.Element => {
             maxime sapiente cum nihil?
           </p>
         </div>
-        <div className="max-w-2xl rounded-br-xl rounded-bl-xl bg-white px-12 py-8 text-center">
+        <div className="max-w-2xl rounded-br-xl rounded-bl-xl bg-white px-12 pt-8 pb-18 text-center">
           <h1 className="mb-4 text-3xl font-semibold tracking-tight md:text-6xl">
             Section 3
           </h1>

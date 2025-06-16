@@ -14,7 +14,7 @@ const ContactPage: React.FC<ContactProps> = ({
       <div className="mx-[auto] my-[15%] block w-[80%] rounded-2xl bg-white px-[20px] py-[20px] *:text-center lg:flex lg:items-center lg:justify-around">
         <div className="mb-5 pt-[10px] lg:w-[40%]">
           <h1 className="my-2 text-3xl font-bold">Contact Us</h1>
-          <p className="mx-auto my-2 max-w-[400px] text-base">
+          <p className="mx-auto my-2 max-w-[400px] text-base text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             porro eligendi impedit voluptatem obcaecati quas doloremque iste
             accusantium, incidunt magni, repellat, vel natus ipsum adipisci
