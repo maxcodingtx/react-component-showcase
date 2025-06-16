@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface NavigationBarProps {
   WebsiteName: string;
@@ -11,13 +11,40 @@ function NavigationBar({ WebsiteName }: NavigationBarProps) {
       <nav>
         <ul className="flex *:mx-2 *:font-semibold">
           <li>
-            <Link to="/pages/home">Home</Link>
+            <NavLink
+              to="/pages/home"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-white pb-1"
+                  : "pb-1 hover:border-b-2 hover:border-gray-300"
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/pages/about">About</Link>
+            <NavLink
+              to="/pages/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-white pb-1"
+                  : "pb-1 hover:border-b-2 hover:border-gray-300"
+              }
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <Link to="/pages/contact">Contact</Link>
+            <NavLink
+              to="/pages/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-white pb-1"
+                  : "pb-1 hover:border-b-2 hover:border-gray-300"
+              }
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>
