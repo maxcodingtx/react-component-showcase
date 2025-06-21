@@ -27,11 +27,11 @@ const NavLinks = (): JSX.Element => {
 
 const NavBar = (): JSX.Element => {
   return (
-    <div className="my-3 flex items-center justify-between">
+    <nav className="my-3 flex items-center justify-between">
       <Logo />
 
       <NavLinks />
-    </div>
+    </nav>
   );
 };
 
