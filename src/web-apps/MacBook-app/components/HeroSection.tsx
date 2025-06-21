@@ -17,7 +17,7 @@ const HeroSection = (): JSX.Element => {
         </Button>
       </div>
       <div className="w-[60%]">
-        <img className="" src={MacBookImage} alt="MacBook Image" />
+        <img src={MacBookImage} alt="MacBook Image" />
       </div>
     </section>
   );
