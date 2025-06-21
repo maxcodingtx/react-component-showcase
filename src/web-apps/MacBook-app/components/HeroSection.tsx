@@ -4,7 +4,7 @@ import Button from "./common/Button";
 
 const HeroSection = (): JSX.Element => {
   return (
-    <section className="flex items-center justify-between px-8 py-3">
+    <section className="flex items-center justify-between">
       <div className="w-[35%]">
         <p className="mb-2 text-5xl font-bold">The new MacBook</p>
         <p className="text-xl">Powerful performance in a sleek, thin design.</p>
