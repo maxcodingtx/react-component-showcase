@@ -9,6 +9,7 @@ const HeroSection = (): JSX.Element => {
         <p className="mb-2 text-5xl font-bold">The new MacBook</p>
         <p className="text-xl">Powerful performance in a sleek, thin design.</p>
         <Button
+          className="bg-red-400 hover:bg-red-500"
           onClick={(e) => {
             console.log(e.currentTarget);
           }}
