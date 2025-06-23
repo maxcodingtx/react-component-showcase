@@ -7,6 +7,8 @@ const PricingSection = (): JSX.Element => {
       <h1 className="mb-4 text-center text-4xl font-bold md:text-left">
         Pricing
       </h1>
+      {/* NOTE: did not use map() due to personal rule:
+          - If the amount of items created are 3 or less, map is not needed */}
       <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
         {/* 1299/mo pricing */}
         <div className="w-4/7 rounded-xl bg-orange-200 px-4 py-8 md:w-1/3">
