@@ -2,7 +2,7 @@ import { type JSX } from "react";
 import MacBookImage from "../images/MacBook.jpg";
 import Button from "./common/Button";
 
-const HeroSection = (): JSX.Element => {
+export const HeroSection = (): JSX.Element => {
   return (
     <section className="flex items-center justify-between">
       <div className="w-[35%]">
@@ -23,5 +23,3 @@ const HeroSection = (): JSX.Element => {
     </section>
   );
 };
-
-export default HeroSection;

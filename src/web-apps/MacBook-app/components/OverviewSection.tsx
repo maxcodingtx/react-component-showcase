@@ -8,7 +8,10 @@ interface OverviewProps {
   factsInfo: string[];
 }
 
-const Overview: React.FC<OverviewProps> = ({ facts, factsInfo }) => {
+export const OverviewSection: React.FC<OverviewProps> = ({
+  facts,
+  factsInfo,
+}) => {
   const colors = [
     "oklch(91.7% 0.06 205.041)", // cyan
     "oklch(88.5% 0.20 18.334)", // red
@@ -46,5 +49,3 @@ const Overview: React.FC<OverviewProps> = ({ facts, factsInfo }) => {
     </section>
   );
 };
-
-export default Overview;

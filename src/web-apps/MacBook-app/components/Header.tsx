@@ -25,7 +25,7 @@ const NavLinks = (): JSX.Element => {
   );
 };
 
-const NavBar = (): JSX.Element => {
+export const NavBar = (): JSX.Element => {
   return (
     <nav className="my-3 flex items-center justify-between">
       <Logo />
@@ -34,5 +34,3 @@ const NavBar = (): JSX.Element => {
     </nav>
   );
 };
-
-export default NavBar;

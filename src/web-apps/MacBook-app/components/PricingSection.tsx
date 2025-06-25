@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import Button from "./common/Button";
 
-const PricingSection = (): JSX.Element => {
+export const PricingSection = (): JSX.Element => {
   return (
     <section className="my-12">
       <h1 className="mb-4 text-center text-4xl font-bold md:text-left">
@@ -65,5 +65,3 @@ const PricingSection = (): JSX.Element => {
     </section>
   );
 };
-
-export default PricingSection;
