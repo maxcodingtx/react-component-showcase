@@ -9,7 +9,10 @@ interface TestimonialsProps {
   names: string[];
 }
 
-const Testimonials: React.FC<TestimonialsProps> = ({ testimonies, names }) => {
+export const TestimonialSection: React.FC<TestimonialsProps> = ({
+  testimonies,
+  names,
+}) => {
   const iconURLS = [UserIconIndigo, UserIconRed, UserIconOrange, UserIconCyan];
   const colors = [
     "bg-indigo-300",
@@ -44,5 +47,3 @@ const Testimonials: React.FC<TestimonialsProps> = ({ testimonies, names }) => {
     </section>
   );
 };
-
-export default Testimonials;
