@@ -16,7 +16,13 @@ const Header: React.FC = () => {
         <p className="font-[Avenir] text-black">Foo, Our Website</p>
       </div>
 
-      <img className="size-5" src={BurgerIcon} alt="Burger Icon" />
+      {/* Burger icon: visible on smaller screens*/}
+      <img className="size-5 md:hidden" src={BurgerIcon} alt="Burger Icon" />
+
+      {/* Button: visible >= 768px */}
+      <button className="hidden rounded-2xl bg-[#053052] px-8 py-1 font-[Montserrat] text-white md:block">
+        Menu
+      </button>
     </header>
   );
 };
