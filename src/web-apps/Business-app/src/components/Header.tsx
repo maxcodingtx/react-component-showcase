@@ -13,14 +13,14 @@ const Header: React.FC = () => {
           src={Logo}
           alt="Website Logo"
         />
-        <p className="font-[Avenir] text-black">Foo, Our Website</p>
+        <p className="font-[Avenir] font-light text-black">Foo, Our Website</p>
       </div>
 
       {/* Burger icon: visible on smaller screens*/}
       <img className="size-5 md:hidden" src={BurgerIcon} alt="Burger Icon" />
 
       {/* Button: visible >= 768px */}
-      <button className="hidden rounded-2xl bg-[#053052] px-8 py-1 font-[Montserrat] text-white md:block">
+      <button className="hidden rounded-2xl bg-[#053052] px-8 py-1 font-[Quicksand] font-light text-white md:block">
         Menu
       </button>
     </header>
