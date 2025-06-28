@@ -41,3 +41,12 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
