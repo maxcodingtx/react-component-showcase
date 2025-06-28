@@ -9,7 +9,7 @@ const Welcome: React.FC = () => {
         <h1 className="mb-4 text-center font-[Avenir] text-5xl font-bold text-[#053052]">
           Discover Our Offers
         </h1>
-        <p className="mb-4 text-center font-[Quicksand] font-light">
+        <p className="mb-4 max-w-xl text-center font-[Quicksand] font-light md:mx-auto md:block">
           We offer top-quality services tailored to your business needs. Join us
           and start your journey towards success.
         </p>
