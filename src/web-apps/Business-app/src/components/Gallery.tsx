@@ -16,7 +16,7 @@ const Gallery: React.FC = () => {
       <h1 className="pt-6 text-center font-[Avenir] text-3xl font-bold">
         Gallery
       </h1>
-      <div className="grid grid-cols-2 gap-4 py-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 gap-4 py-6 sm:grid-cols-2 md:mx-auto md:w-[600px] md:grid-cols-3">
         {images.map((image, index) => (
           <img
             src={image}
