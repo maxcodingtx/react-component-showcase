@@ -7,7 +7,7 @@ const registerUser = () => {
 
 const Hero: React.FC = () => {
   return (
-    <div
+    <section
       className="*:font-roboto bg-blue-950 bg-cover bg-center px-3 py-20 *:text-center *:text-white"
       style={{ backgroundImage: `url(${heroBackgroundImage})` }}
     >
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       >
         Register Now
       </button>
-    </div>
+    </section>
   );
 };
 
