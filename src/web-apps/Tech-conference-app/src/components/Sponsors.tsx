@@ -18,7 +18,7 @@ const sponsorLogoURLs = [
 
 const Sponsors: React.FC = () => {
   return (
-    <section className="bg-indigo-950 px-3 py-8">
+    <section className="bg-indigo-950 px-3 py-8 *:mx-auto *:max-w-[720px]">
       <h1 className="text-center text-2xl font-bold text-white">
         Our Sponsors
       </h1>
