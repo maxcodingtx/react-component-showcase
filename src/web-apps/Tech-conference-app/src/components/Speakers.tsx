@@ -1,12 +1,8 @@
 import React from "react";
-import backgroundImage from "../images/generic-bg.png";
 import speakerIcon from "../images/icon-speaker.png";
 const Speakers: React.FC = () => {
   return (
-    <section
-      className="bg-cover bg-center bg-no-repeat px-3 py-9"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <section className="px-3 py-9">
       <div className="mx-auto grid max-w-[720px] grid-cols-2 gap-3">
         {[...Array(4)].map((_, index) => (
           <div key={index + 1}>
