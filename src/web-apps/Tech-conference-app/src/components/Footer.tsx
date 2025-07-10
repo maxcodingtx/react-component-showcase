@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="flex justify-around px-3 py-9">
+    <footer className="flex justify-around border-t-2 border-t-indigo-950 px-3 py-9">
       <h1 className="w-2/5 text-center text-2xl font-bold text-white">
         Tech-World <br /> 2025
       </h1>
