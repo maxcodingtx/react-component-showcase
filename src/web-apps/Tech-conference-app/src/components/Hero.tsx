@@ -5,7 +5,7 @@ const registerUser = () => {
   alert("Successfully registered for the conference!");
 };
 
-const Hero: React.FC = () => {
+export const Hero: React.FC = () => {
   return (
     <section
       className="*:font-roboto bg-blue-950 bg-cover bg-center px-3 py-20 *:text-center *:text-white"
@@ -25,4 +25,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+// export Hero;

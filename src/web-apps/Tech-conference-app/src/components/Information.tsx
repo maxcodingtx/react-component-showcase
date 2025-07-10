@@ -2,7 +2,7 @@ import React from "react";
 import informationBackground from "../images/Information-bg.png";
 import informationIconSprite from "../images/information-icon-sprite.png";
 
-const Information: React.FC = () => {
+export const Information: React.FC = () => {
   return (
     <section
       className="font-roboto bg-cover bg-center bg-no-repeat px-3 py-9 *:mx-auto *:block *:max-w-[720px]"
@@ -85,5 +85,3 @@ const Information: React.FC = () => {
     </section>
   );
 };
-
-export default Information;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="flex justify-around px-3 py-9">
       <h1 className="w-2/5 text-center text-2xl font-bold text-white">
@@ -27,4 +27,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+// export  Footer;

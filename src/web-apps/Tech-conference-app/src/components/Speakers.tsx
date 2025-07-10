@@ -1,6 +1,6 @@
 import React from "react";
 import speakerIcon from "../images/icon-speaker.png";
-const Speakers: React.FC = () => {
+export const Speakers: React.FC = () => {
   return (
     <section className="px-3 py-9">
       <div className="mx-auto grid max-w-[720px] grid-cols-2 gap-3">
@@ -24,5 +24,3 @@ const Speakers: React.FC = () => {
     </section>
   );
 };
-
-export default Speakers;
