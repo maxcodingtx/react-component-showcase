@@ -6,6 +6,7 @@ import intelLogo from "../images/logo-sponsors/logo-intel.png";
 import metaLogo from "../images/logo-sponsors/logo-meta.png";
 import microsoftLogo from "../images/logo-sponsors/logo-microsoft.png";
 import oracleLogo from "../images/logo-sponsors/logo-oracle.png";
+import genericBackground from "../images/generic-bg.png";
 
 const sponsorLogoURLs = [
   amazonLogo,
@@ -18,7 +19,10 @@ const sponsorLogoURLs = [
 
 export const Sponsors: React.FC = () => {
   return (
-    <section className="bg-indigo-950 px-3 py-8 *:mx-auto *:max-w-[720px]">
+    <section
+      className="bg-indigo-950 px-3 py-8 *:mx-auto *:max-w-[720px]"
+      style={{ backgroundImage: `url(${genericBackground})` }}
+    >
       <h1 className="text-center text-2xl font-bold text-white">
         Our Sponsors
       </h1>
