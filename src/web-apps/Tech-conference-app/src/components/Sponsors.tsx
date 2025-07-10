@@ -1,21 +1,13 @@
 import React from "react";
-
-import amazonLogo from "../images/logo-sponsors/logo-amazon.png";
-import googleLogo from "../images/logo-sponsors/logo-google.png";
-import intelLogo from "../images/logo-sponsors/logo-intel.png";
-import metaLogo from "../images/logo-sponsors/logo-meta.png";
-import microsoftLogo from "../images/logo-sponsors/logo-microsoft.png";
-import oracleLogo from "../images/logo-sponsors/logo-oracle.png";
 import genericBackground from "../images/generic-bg.png";
 
-const sponsorLogoURLs = [
-  amazonLogo,
-  googleLogo,
-  intelLogo,
-  metaLogo,
-  microsoftLogo,
-  oracleLogo,
-];
+const logos = Object.values(
+  import.meta.glob("../images/logo-sponsors/*.png", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }),
+) as string[];
 
 export const Sponsors: React.FC = () => {
   return (
@@ -27,7 +19,7 @@ export const Sponsors: React.FC = () => {
         Our Sponsors
       </h1>
       <div className="mt-12 grid grid-cols-2 gap-8 px-3">
-        {sponsorLogoURLs.map((logo, index) => (
+        {logos.map((logo, index) => (
           <img
             key={index + 1}
             src={logo}
