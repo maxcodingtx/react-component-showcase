@@ -10,7 +10,7 @@ export const Information: React.FC = () => {
     >
       {/* Venue & Tickets */}
       <section className="">
-        <h1 className="text-center text-2xl font-bold text-white">
+        <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
           Venue & Tickets
         </h1>
         <div className="my-3 flex justify-between border-b-2 border-b-indigo-950 py-3 *:w-4/7">
