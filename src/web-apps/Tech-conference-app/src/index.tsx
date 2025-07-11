@@ -11,10 +11,12 @@ import genericBackground from "./images/generic-bg.png";
 import "../index.css";
 const Index: React.FC = () => {
   return (
-    <>
+    <main className="font-[roboto]">
       <Hero></Hero>
-      <Sponsors></Sponsors>
-      <Information></Information>
+      <section className="md:grid md:grid-cols-2">
+        <Sponsors></Sponsors>
+        <Information></Information>
+      </section>
       <section
         className="bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${genericBackground})` }}
@@ -22,7 +24,7 @@ const Index: React.FC = () => {
         <Speakers></Speakers>
         <Footer></Footer>
       </section>
-    </>
+    </main>
   );
 };
 
