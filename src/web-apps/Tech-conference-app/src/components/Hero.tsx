@@ -8,7 +8,7 @@ const registerUser = () => {
 export const Hero: React.FC = () => {
   return (
     <section
-      className="bg-blue-950 bg-cover bg-center px-3 py-20 *:text-center *:font-[roboto] *:text-white"
+      className="bg-blue-950 bg-cover bg-center px-3 py-20 *:text-center *:text-white"
       style={{ backgroundImage: `url(${heroBackgroundImage})` }}
     >
       <h1 className="text-center text-2xl font-semibold md:text-4xl">
