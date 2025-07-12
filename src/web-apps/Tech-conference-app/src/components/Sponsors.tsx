@@ -12,13 +12,13 @@ const logos = Object.values(
 export const Sponsors: React.FC = () => {
   return (
     <section
-      className="bg-indigo-950 px-3 py-8 *:mx-auto *:max-w-[720px]"
+      className="bg-indigo-950 px-3 py-9 *:mx-auto *:max-w-[720px]"
       style={{ backgroundImage: `url(${genericBackground})` }}
     >
       <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
         Our Sponsors
       </h1>
-      <div className="mt-12 grid grid-cols-2 gap-8 px-3 md:h-[500px]">
+      <div className="mt-12 grid grid-cols-2 gap-8 px-3 md:h-[calc(100%-4rem)]">
         {logos.map((logo, index) => (
           <img
             key={index + 1}
