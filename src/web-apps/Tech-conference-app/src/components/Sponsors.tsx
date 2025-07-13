@@ -1,5 +1,5 @@
 import React from "react";
-import genericBackground from "../images/generic-bg.png";
+// import genericBackground from "../images/generic-bg.png";
 
 const logos = Object.values(
   import.meta.glob("../images/logo-sponsors/*.png", {
@@ -12,8 +12,8 @@ const logos = Object.values(
 export const Sponsors: React.FC = () => {
   return (
     <section
-      className="bg-indigo-950 px-3 py-9 *:mx-auto *:max-w-[720px]"
-      style={{ backgroundImage: `url(${genericBackground})` }}
+      className="px-3 py-9 *:mx-auto *:max-w-[720px]"
+      // style={{ backgroundImage: `url(${genericBackground})` }}
     >
       <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
         Our Sponsors

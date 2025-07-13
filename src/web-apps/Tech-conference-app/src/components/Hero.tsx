@@ -1,5 +1,5 @@
 import React from "react";
-import heroBackgroundImage from "../images/hero-bg.png";
+// import heroBackgroundImage from "../images/hero-bg.png";
 
 const registerUser = () => {
   alert("Successfully registered for the conference!");
@@ -8,8 +8,8 @@ const registerUser = () => {
 export const Hero: React.FC = () => {
   return (
     <section
-      className="bg-blue-950 bg-cover bg-center px-3 py-20 *:text-center *:text-white"
-      style={{ backgroundImage: `url(${heroBackgroundImage})` }}
+      className="bg-cover bg-center px-3 py-20 *:text-center *:text-white"
+      // style={{ backgroundImage: `url(${heroBackgroundImage})` }}
     >
       <h1 className="text-center text-2xl font-semibold md:text-4xl">
         TECH-WORLD 2025
