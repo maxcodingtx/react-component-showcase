@@ -1,15 +1,11 @@
 import React from "react";
-// import informationBackground from "../images/Information-bg.png";
 import informationIconSprite from "../images/information-icon-sprite.png";
 
 export const Information: React.FC = () => {
   return (
-    <section
-      className="font-roboto bg-cover bg-center bg-no-repeat px-3 py-9 *:mx-auto *:block *:max-w-[720px]"
-      // style={{ backgroundImage: `url(${informationBackground})` }}
-    >
+    <section className="font-roboto px-3 py-9 *:mx-auto *:block *:max-w-[720px]">
       {/* Venue & Tickets */}
-      <section className="">
+      <section>
         <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
           Venue & Tickets
         </h1>
@@ -45,7 +41,7 @@ export const Information: React.FC = () => {
         </div>
       </section>
       {/* Event Features */}
-      <section className="">
+      <section>
         <h1 className="text-center text-2xl font-bold text-white">
           Event Features
         </h1>

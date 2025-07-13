@@ -1,5 +1,4 @@
 import React from "react";
-// import heroBackgroundImage from "../images/hero-bg.png";
 
 const registerUser = () => {
   alert("Successfully registered for the conference!");
@@ -7,10 +6,7 @@ const registerUser = () => {
 
 export const Hero: React.FC = () => {
   return (
-    <section
-      className="bg-cover bg-center px-3 py-20 *:text-center *:text-white"
-      // style={{ backgroundImage: `url(${heroBackgroundImage})` }}
-    >
+    <section className="px-3 py-20 *:text-center *:text-white">
       <h1 className="text-center text-2xl font-semibold md:text-4xl">
         TECH-WORLD 2025
       </h1>
