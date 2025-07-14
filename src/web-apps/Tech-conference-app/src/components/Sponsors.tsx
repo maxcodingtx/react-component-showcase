@@ -11,7 +11,7 @@ const logos = Object.values(
 
 export const Sponsors: React.FC = () => {
   return (
-    <section className="px-3 py-9 *:mx-auto *:max-w-[720px]">
+    <section className="px-3 py-9 *:mx-auto">
       <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
         Our Sponsors
       </h1>
