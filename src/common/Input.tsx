@@ -5,11 +5,12 @@ interface InputProps {
   label?: string;
   type: "text" | "email" | "password" | "number" | "date";
   value?: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   className?: string;
   required?: boolean;
   disabled?: boolean;
+  ref?: React.Ref<HTMLInputElement>;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -22,7 +23,11 @@ const Input: React.FC<InputProps> = ({
   className = "",
   required = false,
   disabled = false,
-}) => {
+  ref,
+}: InputProps &
+  React.InputHTMLAttributes<HTMLInputElement> & {
+    ref?: React.Ref<HTMLInputElement>;
+  }) => {
   return (
     <div className="mx-[10px] my-[8px]">
       <label
@@ -35,12 +40,13 @@ const Input: React.FC<InputProps> = ({
       <input
         type={type}
         id={id}
-        name={id} // Good practice for form handling
+        name={id}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
         required={required}
         disabled={disabled}
+        ref={ref}
         className={`focus:shadow-outline w-full rounded border px-3 py-2 text-gray-700 shadow ${disabled ? "cursor-not-allowed bg-gray-200" : "hover:border-sky-600"} ${className}`}
       />
     </div>
