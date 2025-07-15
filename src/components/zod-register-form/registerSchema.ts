@@ -11,7 +11,12 @@ export const formSchema = z
       .min(1, "Last name is required")
       .max(50, "Last name must be less than 50 characters"),
     email: z.string().email("Invalid email address"),
-    phone: z.string().optional(),
+    phone: z
+      .string()
+      .optional()
+      .refine((val) => !val || !isNaN(Number(val)), {
+        message: "Phone must be a number",
+      }),
     password: z.string().min(4, "Password must be at least 4 characters long"),
     confirmPassword: z
       .string()
@@ -19,6 +24,7 @@ export const formSchema = z
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
+    path: ["confirmPassword"],
   });
 
 export type FormData = z.infer<typeof formSchema>;
