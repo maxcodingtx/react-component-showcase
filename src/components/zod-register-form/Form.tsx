@@ -7,16 +7,19 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
     reset,
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
-  // mock submit function
   const onSubmit = async (data: FormData) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Form submitted:", data);
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(data);
+      }, 1250);
+    });
+    alert("Form submitted successfully!");
     reset();
   };
 
@@ -58,7 +61,7 @@ export default function Form() {
           {...register("email")}
           label="Email"
           id="email"
-          type="email"
+          type="text"
           className="w-full"
         />
         {errors.email && (
@@ -103,7 +106,6 @@ export default function Form() {
           </p>
         )}
         <button
-          onClick={() => {}}
           disabled={isSubmitting}
           type="submit"
           className="mx-auto mt-8 block rounded-lg bg-blue-300 px-8 py-3 font-bold text-white hover:bg-blue-400 disabled:cursor-not-allowed disabled:bg-gray-300"
