@@ -2,6 +2,7 @@ import Input from "../../common/Input";
 import { useForm } from "react-hook-form";
 import { formSchema, type FormData } from "./registerSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { submitRegister } from "./submitRegister";
 
 export default function Form() {
   const {
@@ -13,20 +14,10 @@ export default function Form() {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = async (data: FormData) => {
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 1250);
-    });
-    alert("Form submitted successfully!");
-    reset();
-  };
-
   return (
     <div className="h-auto w-screen bg-gradient-to-r from-blue-200 to-cyan-200 py-5">
       <form
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit((data) => submitRegister(data, reset))}
         className="mx-auto block max-w-md rounded-lg bg-white p-6 shadow-md"
       >
         <h1 className="mb-4 text-center text-2xl font-extrabold">
