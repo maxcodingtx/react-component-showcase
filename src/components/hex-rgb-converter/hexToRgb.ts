@@ -1,6 +1,10 @@
 export function hexToRgb(hex: string): number[] {
   let cleanHex = hex.startsWith("#") ? hex.slice(1) : hex;
 
+  if (cleanHex.length !== 3 && cleanHex.length !== 6) {
+    return [];
+  }
+
   if (cleanHex.length === 3) {
     cleanHex = cleanHex
       .split("")
