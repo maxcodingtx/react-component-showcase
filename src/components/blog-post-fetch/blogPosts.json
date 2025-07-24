@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Understanding React Hooks",
+    "author": "Jane Doe",
+    "date": "2024-06-01",
+    "body": "React Hooks allow you to use state and other React features without writing a class. Learn how to use useState and useEffect in your components."
+  },
+  {
+    "id": 2,
+    "title": "A Guide to Modern JavaScript",
+    "author": "John Smith",
+    "date": "2024-05-25",
+    "body": "Modern JavaScript includes ES6 features like arrow functions, destructuring, and modules. This guide covers the essentials for writing clean and efficient code."
+  },
+  {
+    "id": 3,
+    "title": "Styling in React: CSS-in-JS vs Traditional CSS",
+    "author": "Emily Lee",
+    "date": "2024-05-15",
+    "body": "Explore the pros and cons of CSS-in-JS libraries compared to traditional CSS approaches when styling React applications."
+  }
+]
