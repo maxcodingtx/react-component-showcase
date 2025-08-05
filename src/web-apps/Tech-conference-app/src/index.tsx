@@ -9,7 +9,7 @@ import {
 import mainBackground from "./images/main-bg.png";
 import "../index.css";
 
-const Index: React.FC = () => {
+const TechConferenceApp: React.FC = () => {
   return (
     <main
       className="bg-cover bg-center bg-no-repeat font-[roboto]"
@@ -28,4 +28,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default TechConferenceApp;
