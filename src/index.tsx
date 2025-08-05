@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import NavigationBar from "./components/React-Navbar/navbar";
-import AboutPage from "./components/React-Navbar/pages/about";
-import ContactPage from "./components/React-Navbar/pages/contact";
-import HomePage from "./components/React-Navbar/pages/home";
+import NavigationBar from "./my-components/React-Navbar/navbar";
+import AboutPage from "./my-components/React-Navbar/pages/about";
+import ContactPage from "./my-components/React-Navbar/pages/contact";
+import HomePage from "./my-components/React-Navbar/pages/home";
 
 function App() {
   return (
