@@ -4,9 +4,10 @@ import UserIconIndigo from "../images/user-icon-indigo.jpg";
 import UserIconRed from "../images/user-icon-red.jpg";
 import UserIconCyan from "../images/user-icon-cyan.jpg";
 
+// Unnecessary, but wanted to experiment with types.
 interface TestimonialsProps {
-  testimonies: string[];
-  names: string[];
+  testimonies: [string, string, string, string];
+  names: [string, string, string, string];
 }
 
 export const TestimonialSection: React.FC<TestimonialsProps> = ({
