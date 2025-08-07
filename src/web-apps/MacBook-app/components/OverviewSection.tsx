@@ -3,9 +3,10 @@ import Gear from "../images/gear-icon.png";
 import Shield from "../images/shield-icon.png";
 import Battery from "../images/battery-icon.png";
 
+// Unnecessary, but wanted to experiment with types.
 interface OverviewProps {
-  facts: string[];
-  factsInfo: string[];
+  facts: [string, string, string, string];
+  factsInfo: [string, string, string, string];
 }
 
 export const OverviewSection: React.FC<OverviewProps> = ({
@@ -31,10 +32,12 @@ export const OverviewSection: React.FC<OverviewProps> = ({
     <section className="mt-3 grid grid-cols-2 grid-rows-2 gap-10">
       {facts.map((fact, index) => (
         <div
+          key={index}
           className="flex rounded-xl px-4 py-4 opacity-80"
           style={{ backgroundColor: colors[index] }}
         >
           <div
+            key={index}
             className="mr-4 max-w-8 self-start rounded p-2"
             style={{ backgroundColor: iconsBG[index] }}
           >
