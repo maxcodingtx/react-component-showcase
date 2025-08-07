@@ -7,7 +7,7 @@ import {
   TestimonialSection,
 } from "./components/barrel";
 
-const MacBookEventPage = () => {
+const MacBookMain = () => {
   return (
     <main className="font-roboto mx-auto my-6 block w-[min(800px,90%-2rem)] rounded-2xl bg-[#e7e4e0] px-8 py-3">
       <NavBar></NavBar>
@@ -40,4 +40,4 @@ const MacBookEventPage = () => {
   );
 };
 
-export default MacBookEventPage;
+export default MacBookMain;
