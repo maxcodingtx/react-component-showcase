@@ -1,12 +1,12 @@
 import "./index.css";
-import MacBookEventPage from "./index";
+import MacBookMain from "./index";
 
-const App = () => {
+const MacBookApp = () => {
   return (
-    <body className="bg-gradient-to-br from-purple-400 via-pink-300 to-orange-200 bg-fixed">
-      <MacBookEventPage></MacBookEventPage>
-    </body>
+    <div className="bg-gradient-to-br from-purple-400 via-pink-300 to-orange-200 bg-fixed py-10">
+      <MacBookMain />
+    </div>
   );
 };
 
-export default App;
+export default MacBookApp;
