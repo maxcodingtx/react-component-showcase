@@ -15,7 +15,7 @@ export default function Form() {
   });
 
   return (
-    <div className="h-auto w-screen bg-gradient-to-r from-blue-200 to-cyan-200 py-5">
+    <div className="h-auto bg-gradient-to-r from-blue-200 to-cyan-200 py-5">
       <form
         onSubmit={handleSubmit((data) => submitRegister(data, reset))}
         className="mx-auto block max-w-md rounded-lg bg-white p-6 shadow-md"
