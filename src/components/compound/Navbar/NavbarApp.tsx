@@ -6,7 +6,7 @@ import HomePage from "./pages/home";
 
 function App() {
   return (
-    <body className="bg-gradient-to-r from-indigo-400 to-cyan-400">
+    <div className="bg-gradient-to-r from-indigo-400 to-cyan-400">
       <BrowserRouter>
         <NavigationBar WebsiteName="Test Name" />
         <Routes>
@@ -28,7 +28,7 @@ function App() {
           <Route path="/pages/home" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
-    </body>
+    </div>
   );
 }
 

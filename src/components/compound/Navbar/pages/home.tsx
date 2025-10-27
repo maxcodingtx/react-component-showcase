@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 const HomePage = (): JSX.Element => {
   return (
-    <body className="bg-gradient-to-r from-indigo-400 to-cyan-400">
+    <div className="bg-gradient-to-r from-indigo-400 to-cyan-400">
       <div className="my-6 flex flex-col items-center px-8 py-12">
         <div className="max-w-2xl rounded-tl-xl rounded-tr-xl bg-white px-12 py-18 text-center">
           <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-6xl">
@@ -65,7 +65,7 @@ const HomePage = (): JSX.Element => {
           </p>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 

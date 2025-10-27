@@ -10,7 +10,7 @@ const ContactPage: React.FC<ContactProps> = ({
   ContactMethodInfo,
 }) => {
   return (
-    <body className="bg-gradient-to-r from-indigo-400 to-cyan-400">
+    <div className="bg-gradient-to-r from-indigo-400 to-cyan-400">
       <div className="mx-[auto] my-[15%] block w-[80%] rounded-2xl bg-white px-[20px] py-[20px] *:text-center lg:flex lg:items-center lg:justify-around">
         <div className="mb-5 pt-[10px] lg:w-[40%]">
           <h1 className="my-2 text-3xl font-bold">Contact Us</h1>
@@ -32,7 +32,7 @@ const ContactPage: React.FC<ContactProps> = ({
           ))}
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
