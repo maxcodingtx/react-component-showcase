@@ -1,22 +1,13 @@
-import React from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  className = "",
-  ...props
-}) => {
-  const buttonStyles =
-    "mx-[10px] my-[8px] cursor-pointer rounded-[6px] border-[4px] border-solid border-sky-300 bg-white px-[12px] py-[9px] font-sans font-[550] text-black shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] hover:bg-gray-200 active:scale-95";
-
-  return (
-    <button className={`${buttonStyles} ${className}`} {...props}>
-      {children}
-    </button>
-  );
-};
+const Button = ({ children, className = "", ...props }: ButtonProps) => (
+  <button className={`btn btn-primary ${className}`} {...props}>
+    {children}
+  </button>
+);
 
 export default Button;
