@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../common/Button.tsx";
+import Button from "../../common/Button.tsx";
 
 const CountButton: React.FC = () => {
   const [count, setCount] = useState(0);
