@@ -1,10 +1,12 @@
-export { default as BMICalculator } from "./BMICalculator";
-export { default as CountButton } from "./CountButton";
-export { default as FontWeightSelector } from "./FontWeightSelector";
-export { default as LoginForm } from "./LoginForm";
-export { default as NameForm } from "./NameForm";
-export { default as UseEffectTimer } from "./useEffectTimer";
+export { default as BMICalculator } from "./BMICalculator/BMICalculator";
+export { default as CountButton } from "./CountButton/CountButton";
+export { default as FontWeightSelector } from "./FontWeightSelector/FontWeightSelector";
+export { default as LoginForm } from "./LoginForm/LoginForm";
+export { default as NameForm } from "./NameForm/NameForm";
+export { default as UseEffectTimer } from "./UseEffectTimer/useEffectTimer";
 export { default as BlogPostContainer } from "./BlogPostContainer/BlogPostContainer";
 export { default as HexRgbConverter } from "./HexRgbConverter";
 export { default as NavbarApp } from "./Navbar/NavbarApp";
 export { default as ZodRegisterForm } from "./ZodRegisterForm/Form";
+export { MovieExplorerMain } from "./MovieExplorer/main";
+export { default as ProductCatalogApp } from "./ProductCatalog/app";
