@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../common/Input";
-import Button from "../common/Button";
+import Input from "../../common/Input";
+import Button from "../../common/Button";
 
 const BMICalculator: React.FC = () => {
   const [weight, setWeight] = useState(0);
