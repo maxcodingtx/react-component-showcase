@@ -1,7 +1,7 @@
 // Category Filter Component
 // This component allows users to filter products by category.
 // Takes two props, categories (array of category strings) and onSelectCategory (callback function).
-import { ProductType } from "../ProductType";
+import { type ProductType } from "../ProductType";
 
 type AcceptedStrings =
   | Pick<ProductType, "category">["category"]

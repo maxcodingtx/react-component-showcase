@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Input from "../common/Input";
+import Input from "../../common/Input";
 
 const NameForm: React.FC = () => {
   const [name, setName] = useState({
