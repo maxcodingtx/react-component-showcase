@@ -1,5 +1,5 @@
-import Button from "../common/Button";
-import Input from "../common/Input";
+import Button from "../../common/Button";
+import Input from "../../common/Input";
 import React, { useState } from "react";
 
 const LoginPage: React.FC = () => {
