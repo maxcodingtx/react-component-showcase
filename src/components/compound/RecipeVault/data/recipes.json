@@ -1,0 +1,661 @@
+[
+  {
+    "id": 1,
+    "title": "Classic Margherita Pizza",
+    "description": "Traditional Italian pizza with fresh tomatoes, mozzarella, and basil",
+    "cookTime": "25 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 pizza dough",
+      "1/2 cup tomato sauce",
+      "8 oz fresh mozzarella",
+      "Fresh basil leaves",
+      "2 tbsp olive oil",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Preheat oven to 475°F",
+      "Roll out pizza dough",
+      "Spread tomato sauce evenly",
+      "Add mozzarella cheese",
+      "Bake for 12-15 minutes",
+      "Top with fresh basil"
+    ],
+    "category": "Italian"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "description": "Creamy tomato-based curry with tender chicken pieces",
+    "cookTime": "45 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 lbs chicken breast",
+      "1 cup heavy cream",
+      "1 can crushed tomatoes",
+      "2 tbsp tikka masala spice",
+      "1 onion, diced",
+      "3 cloves garlic",
+      "1 inch ginger",
+      "Basmati rice"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spices",
+      "Sauté onion, garlic, and ginger",
+      "Add tomatoes and spices",
+      "Cook chicken until done",
+      "Add cream and simmer",
+      "Serve over rice"
+    ],
+    "category": "Indian"
+  },
+  {
+    "id": 3,
+    "title": "Caesar Salad",
+    "description": "Crisp romaine lettuce with parmesan and homemade dressing",
+    "cookTime": "15 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 heads romaine lettuce",
+      "1/2 cup parmesan cheese",
+      "1/2 cup croutons",
+      "2 tbsp lemon juice",
+      "3 tbsp olive oil",
+      "2 anchovy fillets",
+      "1 clove garlic"
+    ],
+    "instructions": [
+      "Wash and chop romaine lettuce",
+      "Make dressing with lemon, oil, garlic, anchovies",
+      "Toss lettuce with dressing",
+      "Top with parmesan and croutons"
+    ],
+    "category": "Salad"
+  },
+  {
+    "id": 4,
+    "title": "Beef Tacos",
+    "description": "Seasoned ground beef in soft tortillas with fresh toppings",
+    "cookTime": "30 minutes",
+    "servings": 8,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 lb ground beef",
+      "8 soft tortillas",
+      "1 packet taco seasoning",
+      "1 cup shredded cheese",
+      "1 tomato, diced",
+      "1/2 cup onion, diced",
+      "Lettuce",
+      "Sour cream"
+    ],
+    "instructions": [
+      "Brown ground beef in skillet",
+      "Add taco seasoning and water",
+      "Warm tortillas",
+      "Fill tortillas with beef",
+      "Add toppings as desired"
+    ],
+    "category": "Mexican"
+  },
+  {
+    "id": 5,
+    "title": "Chocolate Chip Cookies",
+    "description": "Classic soft and chewy cookies loaded with chocolate chips",
+    "cookTime": "25 minutes",
+    "servings": 24,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 1/4 cups flour",
+      "1 cup butter, softened",
+      "3/4 cup brown sugar",
+      "1/2 cup white sugar",
+      "2 eggs",
+      "2 tsp vanilla",
+      "1 tsp baking soda",
+      "2 cups chocolate chips"
+    ],
+    "instructions": [
+      "Preheat oven to 375°F",
+      "Cream butter and sugars",
+      "Add eggs and vanilla",
+      "Mix in dry ingredients",
+      "Fold in chocolate chips",
+      "Bake 9-11 minutes"
+    ],
+    "category": "Dessert"
+  },
+  {
+    "id": 6,
+    "title": "Grilled Salmon",
+    "description": "Perfectly grilled salmon with herbs and lemon",
+    "cookTime": "20 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "4 salmon fillets",
+      "2 tbsp olive oil",
+      "2 lemons",
+      "2 tbsp fresh dill",
+      "Salt and pepper",
+      "Garlic powder"
+    ],
+    "instructions": [
+      "Preheat grill to medium-high",
+      "Season salmon with salt, pepper, garlic",
+      "Brush with olive oil",
+      "Grill 4-6 minutes per side",
+      "Serve with lemon and dill"
+    ],
+    "category": "Seafood"
+  },
+  {
+    "id": 7,
+    "title": "Pancakes",
+    "description": "Fluffy breakfast pancakes perfect for weekend mornings",
+    "cookTime": "20 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups flour",
+      "2 tbsp sugar",
+      "2 tsp baking powder",
+      "1/2 tsp salt",
+      "2 eggs",
+      "1 3/4 cups milk",
+      "1/4 cup melted butter",
+      "Syrup for serving"
+    ],
+    "instructions": [
+      "Mix dry ingredients",
+      "Whisk eggs, milk, and butter",
+      "Combine wet and dry ingredients",
+      "Cook on griddle until bubbles form",
+      "Flip and cook until golden",
+      "Serve with syrup"
+    ],
+    "category": "Breakfast"
+  },
+  {
+    "id": 8,
+    "title": "Spaghetti Carbonara",
+    "description": "Creamy Roman pasta dish with eggs, cheese, and pancetta",
+    "cookTime": "25 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 lb spaghetti",
+      "6 oz pancetta",
+      "4 eggs",
+      "1 cup pecorino romano",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Cook spaghetti al dente",
+      "Crisp pancetta in large pan",
+      "Beat eggs with cheese and pepper",
+      "Toss hot pasta with pancetta",
+      "Remove from heat, add egg mixture",
+      "Toss quickly to create creamy sauce"
+    ],
+    "category": "Italian"
+  },
+  {
+    "id": 9,
+    "title": "Greek Salad",
+    "description": "Fresh Mediterranean salad with feta and olives",
+    "cookTime": "10 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 large tomatoes",
+      "1 cucumber",
+      "1/2 red onion",
+      "1/2 cup kalamata olives",
+      "6 oz feta cheese",
+      "1/4 cup olive oil",
+      "2 tbsp red wine vinegar",
+      "Oregano"
+    ],
+    "instructions": [
+      "Chop tomatoes and cucumber",
+      "Slice red onion thinly",
+      "Combine vegetables and olives",
+      "Whisk oil, vinegar, and oregano",
+      "Top with feta and dressing"
+    ],
+    "category": "Greek"
+  },
+  {
+    "id": 10,
+    "title": "Beef Stir Fry",
+    "description": "Quick and healthy stir fry with tender beef and vegetables",
+    "cookTime": "20 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 lb beef sirloin, sliced",
+      "2 cups mixed vegetables",
+      "3 tbsp soy sauce",
+      "2 tbsp oyster sauce",
+      "1 tbsp cornstarch",
+      "2 cloves garlic",
+      "1 tbsp vegetable oil",
+      "Cooked rice"
+    ],
+    "instructions": [
+      "Marinate beef in soy sauce and cornstarch",
+      "Heat oil in wok or large pan",
+      "Stir fry beef until browned",
+      "Add vegetables and garlic",
+      "Add sauces and stir fry 3-4 minutes",
+      "Serve over rice"
+    ],
+    "category": "Asian"
+  },
+  {
+    "id": 11,
+    "title": "French Toast",
+    "description": "Golden, custardy breakfast treat with cinnamon",
+    "cookTime": "15 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "8 slices bread",
+      "4 eggs",
+      "1/2 cup milk",
+      "1 tsp vanilla",
+      "1 tsp cinnamon",
+      "2 tbsp butter",
+      "Powdered sugar",
+      "Syrup"
+    ],
+    "instructions": [
+      "Whisk eggs, milk, vanilla, cinnamon",
+      "Heat butter in large skillet",
+      "Dip bread in egg mixture",
+      "Cook until golden on both sides",
+      "Dust with powdered sugar",
+      "Serve with syrup"
+    ],
+    "category": "Breakfast"
+  },
+  {
+    "id": 12,
+    "title": "Chicken Noodle Soup",
+    "description": "Comforting homemade soup with tender chicken and vegetables",
+    "cookTime": "45 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 whole chicken",
+      "8 cups water",
+      "2 carrots, diced",
+      "2 celery stalks, diced",
+      "1 onion, diced",
+      "8 oz egg noodles",
+      "2 bay leaves",
+      "Salt and pepper",
+      "Fresh parsley"
+    ],
+    "instructions": [
+      "Boil chicken in water with vegetables",
+      "Remove chicken, shred meat",
+      "Strain broth, return to pot",
+      "Add noodles and cook",
+      "Return chicken to pot",
+      "Season and garnish with parsley"
+    ],
+    "category": "Soup"
+  },
+  {
+    "id": 13,
+    "title": "BBQ Ribs",
+    "description": "Tender, smoky ribs with homemade barbecue sauce",
+    "cookTime": "3 hours",
+    "servings": 6,
+    "difficulty": "Hard",
+    "ingredients": [
+      "2 racks baby back ribs",
+      "1/4 cup brown sugar",
+      "2 tbsp paprika",
+      "1 tbsp garlic powder",
+      "1 tbsp onion powder",
+      "1 tsp cayenne",
+      "BBQ sauce",
+      "Apple cider vinegar"
+    ],
+    "instructions": [
+      "Mix dry rub ingredients",
+      "Season ribs with rub",
+      "Wrap in foil, bake at 275°F for 2.5 hours",
+      "Unwrap, brush with BBQ sauce",
+      "Grill or broil 5 minutes per side"
+    ],
+    "category": "BBQ"
+  },
+  {
+    "id": 14,
+    "title": "Caprese Salad",
+    "description": "Simple Italian salad with tomatoes, mozzarella, and basil",
+    "cookTime": "10 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "4 large tomatoes",
+      "8 oz fresh mozzarella",
+      "Fresh basil leaves",
+      "1/4 cup olive oil",
+      "2 tbsp balsamic vinegar",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Slice tomatoes and mozzarella",
+      "Arrange alternating with basil",
+      "Drizzle with oil and vinegar",
+      "Season with salt and pepper"
+    ],
+    "category": "Italian"
+  },
+  {
+    "id": 15,
+    "title": "Pad Thai",
+    "description": "Classic Thai noodle dish with tangy, sweet sauce",
+    "cookTime": "30 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "8 oz rice noodles",
+      "2 eggs",
+      "1/2 lb shrimp",
+      "3 tbsp fish sauce",
+      "2 tbsp tamarind paste",
+      "2 tbsp brown sugar",
+      "Bean sprouts",
+      "Peanuts",
+      "Lime wedges"
+    ],
+    "instructions": [
+      "Soak noodles in warm water",
+      "Mix sauce ingredients",
+      "Stir fry shrimp and eggs",
+      "Add drained noodles and sauce",
+      "Toss with bean sprouts",
+      "Serve with peanuts and lime"
+    ],
+    "category": "Thai"
+  },
+  {
+    "id": 16,
+    "title": "Banana Bread",
+    "description": "Moist, sweet bread perfect for breakfast or snacking",
+    "cookTime": "70 minutes",
+    "servings": 8,
+    "difficulty": "Easy",
+    "ingredients": [
+      "3 ripe bananas",
+      "1/3 cup melted butter",
+      "3/4 cup sugar",
+      "1 egg",
+      "1 tsp vanilla",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "1 1/2 cups flour"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F",
+      "Mash bananas with butter",
+      "Mix in sugar, egg, vanilla",
+      "Add dry ingredients",
+      "Pour into greased loaf pan",
+      "Bake 60-65 minutes"
+    ],
+    "category": "Dessert"
+  },
+  {
+    "id": 17,
+    "title": "Mushroom Risotto",
+    "description": "Creamy Italian rice dish with savory mushrooms",
+    "cookTime": "40 minutes",
+    "servings": 4,
+    "difficulty": "Hard",
+    "ingredients": [
+      "1 1/2 cups arborio rice",
+      "1 lb mixed mushrooms",
+      "6 cups chicken broth",
+      "1/2 cup white wine",
+      "1 onion, minced",
+      "3 cloves garlic",
+      "1/2 cup parmesan",
+      "2 tbsp butter"
+    ],
+    "instructions": [
+      "Sauté mushrooms, set aside",
+      "Sauté onion and garlic",
+      "Add rice, toast 2 minutes",
+      "Add wine, stir until absorbed",
+      "Gradually add warm broth, stirring",
+      "Fold in mushrooms, cheese, butter"
+    ],
+    "category": "Italian"
+  },
+  {
+    "id": 18,
+    "title": "Fish and Chips",
+    "description": "Crispy beer-battered fish with golden chips",
+    "cookTime": "45 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 lbs white fish fillets",
+      "2 large potatoes",
+      "1 cup flour",
+      "1 cup beer",
+      "1 tsp baking powder",
+      "Oil for frying",
+      "Malt vinegar",
+      "Tartar sauce"
+    ],
+    "instructions": [
+      "Cut potatoes into chips, fry until golden",
+      "Make batter with flour, beer, baking powder",
+      "Heat oil to 375°F",
+      "Dip fish in batter, fry until crispy",
+      "Serve with chips, vinegar, tartar sauce"
+    ],
+    "category": "British"
+  },
+  {
+    "id": 19,
+    "title": "Gazpacho",
+    "description": "Refreshing cold Spanish soup perfect for summer",
+    "cookTime": "15 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "6 large tomatoes",
+      "1 cucumber",
+      "1 bell pepper",
+      "1/2 red onion",
+      "3 cloves garlic",
+      "1/4 cup olive oil",
+      "2 tbsp sherry vinegar",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Roughly chop all vegetables",
+      "Blend until smooth",
+      "Add oil, vinegar, seasonings",
+      "Chill for 2 hours",
+      "Adjust seasoning before serving"
+    ],
+    "category": "Spanish"
+  },
+  {
+    "id": 20,
+    "title": "Apple Pie",
+    "description": "Classic American dessert with flaky crust and spiced apples",
+    "cookTime": "60 minutes",
+    "servings": 8,
+    "difficulty": "Hard",
+    "ingredients": [
+      "6 cups sliced apples",
+      "2 pie crusts",
+      "3/4 cup sugar",
+      "2 tbsp flour",
+      "1 tsp cinnamon",
+      "1/4 tsp nutmeg",
+      "2 tbsp butter",
+      "1 egg for wash"
+    ],
+    "instructions": [
+      "Preheat oven to 425°F",
+      "Mix apples with sugar, flour, spices",
+      "Place bottom crust in pie pan",
+      "Fill with apple mixture, dot with butter",
+      "Top with second crust, brush with egg",
+      "Bake 45-50 minutes"
+    ],
+    "category": "Dessert"
+  },
+  {
+    "id": 21,
+    "title": "Chicken Parmesan",
+    "description": "Breaded chicken breast with marinara and cheese",
+    "cookTime": "40 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "4 chicken breasts",
+      "2 cups breadcrumbs",
+      "1 cup flour",
+      "2 eggs",
+      "2 cups marinara sauce",
+      "2 cups mozzarella cheese",
+      "1/2 cup parmesan cheese",
+      "Olive oil"
+    ],
+    "instructions": [
+      "Pound chicken to even thickness",
+      "Set up breading station: flour, eggs, breadcrumbs",
+      "Bread chicken pieces",
+      "Pan fry until golden",
+      "Top with sauce and cheese",
+      "Bake until cheese melts"
+    ],
+    "category": "Italian"
+  },
+  {
+    "id": 22,
+    "title": "Ratatouille",
+    "description": "French vegetable stew bursting with Mediterranean flavors",
+    "cookTime": "50 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 eggplant, diced",
+      "2 zucchini, diced",
+      "1 bell pepper, diced",
+      "1 onion, diced",
+      "4 tomatoes, diced",
+      "4 cloves garlic",
+      "1/4 cup olive oil",
+      "Fresh herbs (thyme, basil)"
+    ],
+    "instructions": [
+      "Sauté onion and garlic in olive oil",
+      "Add eggplant, cook 5 minutes",
+      "Add bell pepper and zucchini",
+      "Add tomatoes and herbs",
+      "Simmer 30 minutes until tender",
+      "Season with salt and pepper"
+    ],
+    "category": "French"
+  },
+  {
+    "id": 23,
+    "title": "Pho",
+    "description": "Vietnamese noodle soup with aromatic broth",
+    "cookTime": "4 hours",
+    "servings": 6,
+    "difficulty": "Hard",
+    "ingredients": [
+      "2 lbs beef bones",
+      "1 lb beef brisket",
+      "1 onion, charred",
+      "3 inch ginger, charred",
+      "Star anise",
+      "Cinnamon stick",
+      "Rice noodles",
+      "Bean sprouts",
+      "Fresh herbs"
+    ],
+    "instructions": [
+      "Char onion and ginger",
+      "Simmer bones and brisket 3 hours",
+      "Add spices, simmer 1 more hour",
+      "Strain broth, slice brisket",
+      "Cook noodles according to package",
+      "Serve with toppings"
+    ],
+    "category": "Vietnamese"
+  },
+  {
+    "id": 24,
+    "title": "Chocolate Brownies",
+    "description": "Rich, fudgy brownies that melt in your mouth",
+    "cookTime": "35 minutes",
+    "servings": 16,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1/2 cup butter",
+      "1 cup sugar",
+      "2 eggs",
+      "1/3 cup cocoa powder",
+      "1/2 cup flour",
+      "1/4 tsp salt",
+      "1/4 tsp baking powder",
+      "1/2 cup chocolate chips"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F",
+      "Melt butter, mix with sugar",
+      "Beat in eggs one at a time",
+      "Mix in dry ingredients",
+      "Fold in chocolate chips",
+      "Bake 25-30 minutes"
+    ],
+    "category": "Dessert"
+  },
+  {
+    "id": 25,
+    "title": "Stuffed Bell Peppers",
+    "description": "Colorful peppers filled with seasoned rice and ground beef",
+    "cookTime": "50 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "6 bell peppers, tops cut off",
+      "1 lb ground beef",
+      "1 cup cooked rice",
+      "1 onion, diced",
+      "1 can diced tomatoes",
+      "1 cup shredded cheese",
+      "Italian seasoning",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Preheat oven to 375°F",
+      "Brown ground beef with onion",
+      "Mix beef with rice, tomatoes, seasonings",
+      "Stuff peppers with mixture",
+      "Place in baking dish with water",
+      "Bake 35 minutes, top with cheese"
+    ],
+    "category": "American"
+  }
+]
