@@ -1,0 +1,32 @@
+import { RecipeCard } from "../components/RecipeCard";
+import { type Recipe } from "../types/recipe";
+import { useRecipes } from "../hooks/useRecipes";
+import { Link } from "react-router";
+
+export const Favorites = () => {
+  const { recipes } = useRecipes();
+  const favoriteRecipesIds: number[] = JSON.parse(
+    localStorage.getItem("favoriteRecipes") || "[]",
+  );
+  const favoriteRecipes: Recipe[] = recipes.filter((recipe) =>
+    favoriteRecipesIds.includes(recipe.id),
+  );
+
+  console.log("Favorite Recipes:", favoriteRecipesIds);
+  return (
+    <div className="grid grid-cols-1 gap-4 p-4 *:p-4 md:grid-cols-2 lg:grid-cols-3">
+      <Link to="/" className="btn btn-secondary col-span-full mb-4">
+        ← Back to Recipes
+      </Link>
+      {favoriteRecipes && favoriteRecipes.length === 0 ? (
+        <p className="col-span-full text-center">No favorite recipes found.</p>
+      ) : (
+        favoriteRecipes?.map((recipe: Recipe) => (
+          <div className="bg-base-300 hover:bg-accent-content rounded-lg shadow-lg hover:shadow-2xl">
+            <RecipeCard key={recipe.id} recipe={recipe} />
+          </div>
+        ))
+      )}
+    </div>
+  );
+};
