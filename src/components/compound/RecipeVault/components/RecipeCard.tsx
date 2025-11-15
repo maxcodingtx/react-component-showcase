@@ -7,23 +7,47 @@ type RecipeCardProps = {
 
 export const RecipeCard = ({ recipe }: RecipeCardProps) => {
   return (
-    <div className="card">
-      <h2 className="card-title">{recipe.title}</h2>
-      <p>{recipe.description}</p>
-      <p>Cook Time: {recipe.cookTime}</p>
-      <p>Servings: {recipe.servings}</p>
-      <p>Difficulty: {recipe.difficulty}</p>
-      <ul>
+    <div className="">
+      <div className="card">
+        <div className="card-body">
+          <h2 className="card-title text-lg">{recipe.title}</h2>
+          <p className="text-base-content/70 text-sm">{recipe.description}</p>
+          <div className="my-4 grid grid-cols-2 gap-2"></div>
+          <div className="stat"></div>
+          <div className="stat-title">Cook Time</div>
+          <div className="stat-value text-sm">{recipe.cookTime}</div>
+        </div>
+        <div className="stat">
+          <div className="stat-title">Servings</div>
+          <div className="stat-value text-sm">{recipe.servings}</div>
+        </div>
+        <div className="stat">
+          <div className="stat-title">Difficulty</div>
+          <div className="stat-value text-sm">{recipe.difficulty}</div>
+        </div>
+        <div className="stat">
+          <div className="stat-title">Category</div>
+          <div className="stat-value text-sm">{recipe.category}</div>
+        </div>
+      </div>
+
+      <div className="divider">Ingredients</div>
+      <ul className="list-inside list-disc space-y-1 text-sm">
         {recipe.ingredients.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
+          <li key={index} className="text-base-content/80">
+            {ingredient}
+          </li>
         ))}
       </ul>
-      <ol>
+
+      <div className="divider">Instructions</div>
+      <ol className="list-inside list-decimal space-y-2 text-sm">
         {recipe.instructions.map((instruction, index) => (
-          <li key={index}>{instruction}</li>
+          <li key={index} className="text-base-content/80">
+            {instruction}
+          </li>
         ))}
       </ol>
-      <p>Category: {recipe.category}</p>
     </div>
   );
 };
