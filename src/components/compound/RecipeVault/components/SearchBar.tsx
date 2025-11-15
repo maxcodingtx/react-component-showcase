@@ -1,15 +1,18 @@
-import { useState } from "react";
+interface SearchBarProps {
+  query: string;
+  onChange: (newQuery: string) => void;
+}
 
-export const SearchBar = () => {
-  const [query, setQuery] = useState("");
-
+export const SearchBar = ({ query, onChange }: SearchBarProps) => {
   return (
-    <input
-      type="text"
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
-      placeholder="Search recipes..."
-      className="input input-primary"
-    />
+    <div className="flex items-center">
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => onChange(e.target.value)}
+        className="flex-grow rounded border border-gray-300 p-2"
+        placeholder="Search for a recipe..."
+      />
+    </div>
   );
 };
