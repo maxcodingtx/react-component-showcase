@@ -1,10 +1,12 @@
 import { RecipeCard } from "../components/RecipeCard";
 import { type Recipe } from "../types/recipe";
-import { useRecipes } from "../hooks/useRecipes";
+import { RecipesProvider } from "../hooks/useRecipes";
 import { Link } from "react-router";
+import { useContext } from "react";
 
 export const Favorites = () => {
-  const { recipes } = useRecipes();
+  const recipesContext = useContext(RecipesProvider);
+  const recipes = recipesContext?.recipes || [];
   const favoriteRecipesIds: number[] = JSON.parse(
     localStorage.getItem("favoriteRecipes") || "[]",
   );
@@ -22,8 +24,11 @@ export const Favorites = () => {
         <p className="col-span-full text-center">No favorite recipes found.</p>
       ) : (
         favoriteRecipes?.map((recipe: Recipe) => (
-          <div className="bg-base-300 hover:bg-accent-content rounded-lg shadow-lg hover:shadow-2xl">
-            <RecipeCard key={recipe.id} recipe={recipe} />
+          <div
+            key={recipe.id}
+            className="bg-base-300 hover:bg-accent-content rounded-lg shadow-lg hover:shadow-2xl"
+          >
+            <RecipeCard recipe={recipe} />
           </div>
         ))
       )}
