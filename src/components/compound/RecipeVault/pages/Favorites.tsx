@@ -1,4 +1,4 @@
-import { RecipeCard } from "../components/RecipeCard";
+import { RecipeCard } from "../components/barrel";
 import { type Recipe } from "../types/recipe";
 import { RecipesProvider } from "../hooks/useRecipes";
 import { Link } from "react-router";

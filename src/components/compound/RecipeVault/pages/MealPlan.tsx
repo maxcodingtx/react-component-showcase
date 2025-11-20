@@ -1,5 +1,5 @@
 import { type Recipe } from "../types/recipe";
-import { MealPlanCalendar } from "../components/MealPlanCalendar";
+import { MealPlanCalendar } from "../components/barrel";
 import { MealPlanProvider } from "../hooks/useMealPlan";
 import { useContext } from "react";
 import { type MealPlanEntry } from "../components/MealPlanCalendar";

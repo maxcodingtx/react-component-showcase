@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import { useState, useEffect, useContext } from "react";
 import { type Recipe } from "../types/recipe";
 import data from "../data/recipes.json";
-import { FavoriteButton } from "../components/FavoriteButton";
+import { FavoriteButton } from "../components/barrel";
 import { Link } from "react-router";
 import { FavoritesProvider } from "../hooks/useFavorites";
 

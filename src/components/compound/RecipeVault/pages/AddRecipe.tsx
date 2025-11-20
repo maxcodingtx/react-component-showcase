@@ -1,4 +1,4 @@
-import { RecipeForm } from "../components/RecipeForm";
+import { RecipeForm } from "../components/barrel";
 import { type Recipe } from "../types/recipe";
 import { RecipesProvider } from "../hooks/useRecipes";
 import { Link } from "react-router";
