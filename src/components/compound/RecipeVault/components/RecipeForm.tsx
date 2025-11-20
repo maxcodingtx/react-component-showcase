@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { type Recipe } from "../types/recipe";
 
-interface RecipeFormProps {
+type RecipeFormProps = {
   onSubmit: (data: Omit<Recipe, "id">) => void;
-}
+};
 
-export const RecipeForm: React.FC<RecipeFormProps> = ({ onSubmit }) => {
+export default function RecipeForm({ onSubmit }: RecipeFormProps) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [cookTime, setCookTime] = useState("");
@@ -225,4 +225,4 @@ export const RecipeForm: React.FC<RecipeFormProps> = ({ onSubmit }) => {
       </div>
     </form>
   );
-};
+}

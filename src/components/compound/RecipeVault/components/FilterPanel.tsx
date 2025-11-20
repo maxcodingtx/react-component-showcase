@@ -10,11 +10,11 @@ interface FilterPanelProps {
   onFilterChange: (difficulty: AcceptedDifficulties) => void;
 }
 
-export const FilterPanel = ({
+export default function FilterPanel({
   difficulties,
   selectedDifficulty,
   onFilterChange,
-}: FilterPanelProps) => {
+}: FilterPanelProps) {
   return (
     <select
       className="select select-primary"
@@ -30,4 +30,4 @@ export const FilterPanel = ({
       ))}
     </select>
   );
-};
+}

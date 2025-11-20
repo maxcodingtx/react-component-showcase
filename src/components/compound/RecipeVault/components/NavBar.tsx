@@ -4,7 +4,7 @@ type navBarProps = {
   favoritesCount?: number;
 };
 
-export const NavBar = ({ favoritesCount }: navBarProps) => {
+export default function NavBar({ favoritesCount }: navBarProps) {
   return (
     <nav className="flex items-center justify-between bg-gray-800 p-4 text-white">
       <NavLink to="/" className="text-xl font-bold">
@@ -26,4 +26,4 @@ export const NavBar = ({ favoritesCount }: navBarProps) => {
       </div>
     </nav>
   );
-};
+}

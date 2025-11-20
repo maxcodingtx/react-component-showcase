@@ -6,7 +6,7 @@ type RecipeCardProps = {
   recipe: Recipe;
 };
 
-export const RecipeCard = ({ recipe }: RecipeCardProps) => {
+export default function RecipeCard({ recipe }: RecipeCardProps) {
   return (
     <div className="">
       <div className="card">
@@ -31,4 +31,4 @@ export const RecipeCard = ({ recipe }: RecipeCardProps) => {
       </div>
     </div>
   );
-};
+}

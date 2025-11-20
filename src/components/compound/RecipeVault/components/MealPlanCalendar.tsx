@@ -15,12 +15,12 @@ interface MealPlanCalendarProps {
   onRemoveMeal: (entryId: string) => void;
 }
 
-export const MealPlanCalendar = ({
+export default function MealPlanCalendar({
   recipes,
   mealPlan,
   onAddMeal,
   onRemoveMeal,
-}: MealPlanCalendarProps) => {
+}: MealPlanCalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [showRecipeSelector, setShowRecipeSelector] = useState(false);
@@ -249,4 +249,4 @@ export const MealPlanCalendar = ({
       )}
     </div>
   );
-};
+}

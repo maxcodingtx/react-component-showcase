@@ -3,7 +3,7 @@ interface SearchBarProps {
   onChange: (newQuery: string) => void;
 }
 
-export const SearchBar = ({ query, onChange }: SearchBarProps) => {
+export default function SearchBar({ query, onChange }: SearchBarProps) {
   return (
     <div className="flex items-center">
       <input
@@ -15,4 +15,4 @@ export const SearchBar = ({ query, onChange }: SearchBarProps) => {
       />
     </div>
   );
-};
+}
