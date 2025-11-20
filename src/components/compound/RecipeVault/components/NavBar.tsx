@@ -20,6 +20,9 @@ export const NavBar = ({ favoritesCount }: navBarProps) => {
         <NavLink to="/add-recipe" className="mr-4">
           Add Recipe
         </NavLink>
+        <NavLink to="/meal-plan" className="mr-4">
+          Meal Plan
+        </NavLink>
       </div>
     </nav>
   );
