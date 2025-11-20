@@ -4,6 +4,7 @@ import { MealPlanProvider } from "../hooks/useMealPlan";
 import { useContext } from "react";
 import { type MealPlanEntry } from "../components/MealPlanCalendar";
 import { RecipesProvider } from "../hooks/useRecipes";
+import { Link } from "react-router";
 
 export const MealPlan = () => {
   const recipesContext = useContext(RecipesProvider);
@@ -26,7 +27,13 @@ export const MealPlan = () => {
 
   return (
     <div>
-      <h1 className="mb-4 text-2xl font-bold">Meal Plan</h1>
+      <Link
+        to="/"
+        className="text-primary mb-4 block text-center hover:underline"
+      >
+        ← Back to Recipe Vault
+      </Link>
+      <h1 className="my-4 text-center text-2xl font-bold">Meal Plan</h1>
 
       <MealPlanCalendar
         recipes={recipes}

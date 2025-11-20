@@ -17,7 +17,10 @@ export const Favorites = () => {
   console.log("Favorite Recipes:", favoriteRecipesIds);
   return (
     <div className="grid grid-cols-1 gap-4 p-4 *:p-4 md:grid-cols-2 lg:grid-cols-3">
-      <Link to="/" className="btn btn-secondary col-span-full mb-4">
+      <Link
+        to="/"
+        className="text-primary col-span-full mb-4 text-center hover:underline"
+      >
         ← Back to Recipes
       </Link>
       {favoriteRecipes && favoriteRecipes.length === 0 ? (
