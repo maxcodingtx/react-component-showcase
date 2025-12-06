@@ -8,5 +8,7 @@ export { default as BlogPostContainer } from "./BlogPostContainer/BlogPostContai
 export { default as HexRgbConverter } from "./HexRgbConverter";
 export { default as NavbarApp } from "./Navbar/NavbarApp";
 export { default as ZodRegisterForm } from "./ZodRegisterForm/Form";
-export { MovieExplorerMain } from "./MovieExplorer/main";
+export { default as MovieExplorerMain } from "./MovieExplorer/main";
 export { default as ProductCatalogApp } from "./ProductCatalog/app";
+export { default as RecipeVaultMain } from "./RecipeVault/main";
+export { default as GradientText } from "./TailwindGradientText/GradientText";
