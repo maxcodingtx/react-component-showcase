@@ -3,7 +3,7 @@ import { MovieExplorerApp } from "./App";
 import { Favorites } from "./Favorites";
 import { MovieDetailsPage } from "./movie/id";
 
-export const MovieExplorerMain = () => {
+export default function MovieExplorerMain() {
   return (
     <BrowserRouter>
       <Routes>
@@ -13,4 +13,4 @@ export const MovieExplorerMain = () => {
       </Routes>
     </BrowserRouter>
   );
-};
+}

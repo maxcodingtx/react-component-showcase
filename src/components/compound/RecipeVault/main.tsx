@@ -5,7 +5,7 @@ import { RecipesProvider, useRecipes } from "./hooks/useRecipes";
 import { useFavorites, FavoritesProvider } from "./hooks/useFavorites";
 import { useMealPlan, MealPlanProvider } from "./hooks/useMealPlan";
 
-export const RecipeVaultMain = () => {
+export default function RecipeVaultMain() {
   const recipesContextValue = useRecipes();
   const favoritesContextValue = useFavorites();
   const mealPlanContextValue = useMealPlan();
@@ -26,4 +26,4 @@ export const RecipeVaultMain = () => {
       </RecipesProvider>
     </BrowserRouter>
   );
-};
+}
