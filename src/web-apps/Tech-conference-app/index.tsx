@@ -1,18 +1,17 @@
-import React from "react";
 import {
   Hero,
   Sponsors,
   Information,
   Speakers,
   Footer,
-} from "./components/barrel";
-import mainBackground from "./images/main-bg.png";
-import "../index.css";
+} from "./src/components/barrel";
+import mainBackground from "./src/images/main-bg.png";
+import "./index.css";
 
-const TechConferenceApp: React.FC = () => {
+export default function TechConferenceApp() {
   return (
     <main
-      className="bg-cover bg-center bg-no-repeat font-[roboto]"
+      className="bg-[url('./images/main-bg.png')] bg-cover bg-center bg-no-repeat font-[roboto]"
       style={{ backgroundImage: `url(${mainBackground})` }}
     >
       <Hero></Hero>
@@ -26,6 +25,4 @@ const TechConferenceApp: React.FC = () => {
       </section>
     </main>
   );
-};
-
-export default TechConferenceApp;
+}
