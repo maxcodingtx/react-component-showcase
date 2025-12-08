@@ -1,5 +1,5 @@
 import React from "react";
-import aboutUsImage from "../images/about-us-image.png"; // Adjust the path as necessary
+import aboutUsImage from "../images/about-us-image.png";
 
 const AboutUs: React.FC = () => {
   return (
