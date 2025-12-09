@@ -11,6 +11,17 @@ import {
   ZodRegisterForm,
 } from "../components/compound/barrel";
 
+import {
+  BusinessApp,
+  MacBookApp,
+  MovieExplorer,
+  ProductCatalog,
+  RecipeVault,
+  TechConferenceApp,
+} from "../web-apps/barrel";
+
+import { BrowserRouter, Routes, Route } from "react-router";
+
 export default function ComponentShowcase() {
   const myComponents = [
     {
@@ -49,51 +60,61 @@ export default function ComponentShowcase() {
     },
   ];
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="sticky top-0 z-10 bg-white shadow-lg">
-        <div className="mx-auto max-w-7xl px-4 py-6">
-          <h1 className="mb-6 text-3xl font-bold text-gray-900">
-            Component Showcase
-          </h1>
-          <nav
-            className="flex flex-wrap gap-4"
-            role="navigation"
-            aria-label="Component sections"
-          >
-            {myComponents.map(({ id, name }) => (
-              <a
-                key={id}
-                href={`#${id}`}
-                className="text-blue-600 transition-colors hover:text-blue-800 hover:underline"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById(id)
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                {name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </nav>
+  const myWebApps = [
+    {
+      id: "business-app",
+      name: "Business App",
+      component: <BusinessApp />,
+    },
+    { id: "macbook-app", name: "MacBook App", component: <MacBookApp /> },
+    {
+      id: "movie-explorer",
+      name: "Movie Explorer",
+      component: <MovieExplorer />,
+    },
+    {
+      id: "product-catalog",
+      name: "Product Catalog",
+      component: <ProductCatalog />,
+    },
+    { id: "recipe-vault", name: "Recipe Vault", component: <RecipeVault /> },
+    {
+      id: "tech-conference-app",
+      name: "Tech Conference App",
+      component: <TechConferenceApp />,
+    },
+  ];
 
-      <div className="mx-auto max-w-7xl space-y-12 px-4">
-        {myComponents.map(({ id, name, component }) => (
-          <section
-            key={id}
-            id={id}
-            className="rounded-lg bg-white p-6 shadow-xl"
-          >
-            <h2 className="mb-4 text-2xl font-semibold text-gray-900">
-              {name}
-            </h2>
-            {component}
-          </section>
-        ))}
+  return (
+    <BrowserRouter>
+      <div className="">
+        <nav className="bg-primary sticky top-0 z-10 shadow-lg">
+          <ul className="flex flex-wrap gap-4 overflow-x-auto p-4">
+            {myComponents.map(({ id, name }) => (
+              <li key={id}>
+                <a href={`/${id}`} className="text-base hover:underline">
+                  {name}
+                </a>
+              </li>
+            ))}
+            {myWebApps.map(({ id, name }) => (
+              <li key={id}>
+                <a href={`/${id}`} className="text-base hover:underline">
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-    </div>
+      <Routes>
+        {myComponents.map(({ id, component }) => (
+          <Route key={id} path={`/${id}`} element={component} />
+        ))}
+        {myWebApps.map(({ id, component }) => (
+          <Route key={id} path={`/${id}`} element={component} />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
 }
