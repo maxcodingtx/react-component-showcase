@@ -1,5 +1,5 @@
 import type { ProductType } from "../ProductType";
-import Button from "../../../common/Button";
+import Button from "../../../components/common/Button";
 
 type ProductCardProps = {
   product: ProductType;

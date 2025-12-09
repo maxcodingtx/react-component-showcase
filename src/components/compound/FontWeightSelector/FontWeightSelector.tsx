@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import RadioButton from "../common/RadioButton";
+import RadioButton from "../../common/RadioButton";
 
 type FontWeight = 200 | 400 | 600 | 800;
 type FontWeightState = {
