@@ -7,20 +7,28 @@ import {
   UseEffectTimer,
   BlogPostContainer,
   HexRgbConverter,
-  NavbarApp,
   ZodRegisterForm,
 } from "../components/compound/barrel";
 
 import {
   BusinessApp,
   MacBookApp,
-  MovieExplorer,
+  // MovieExplorer,
   ProductCatalog,
-  RecipeVault,
+  // RecipeVault,
   TechConferenceApp,
 } from "../web-apps/barrel";
 
-import { BrowserRouter, Routes, Route } from "react-router";
+// Navbar app imports
+import ShowcaseNavBar from "../components/compound/Navbar/ShowcaseNavbar";
+import AboutPage from "../components/compound/Navbar/pages/about";
+import ContactPage from "../components/compound/Navbar/pages/contact";
+import HomePage from "../components/compound/Navbar/pages/home";
+
+import { RecipeVaultApp } from "../web-apps/RecipeVault/App";
+import { MovieExplorerApp } from "../web-apps/MovieExplorer/App";
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function ComponentShowcase() {
   const myComponents = [
@@ -52,7 +60,6 @@ export default function ComponentShowcase() {
       name: "Hex RGB Converter",
       component: <HexRgbConverter />,
     },
-    { id: "navbar-app", name: "Navbar App", component: <NavbarApp /> },
     {
       id: "zod-register-form",
       name: "Zod Register Form",
@@ -68,16 +75,10 @@ export default function ComponentShowcase() {
     },
     { id: "macbook-app", name: "MacBook App", component: <MacBookApp /> },
     {
-      id: "movie-explorer",
-      name: "Movie Explorer",
-      component: <MovieExplorer />,
-    },
-    {
       id: "product-catalog",
       name: "Product Catalog",
       component: <ProductCatalog />,
     },
-    { id: "recipe-vault", name: "Recipe Vault", component: <RecipeVault /> },
     {
       id: "tech-conference-app",
       name: "Tech Conference App",
@@ -85,23 +86,42 @@ export default function ComponentShowcase() {
     },
   ];
 
+  // these apps have their own routing, import their app components separately
+  const routedApps = [
+    {
+      id: "navbar-app",
+      name: "Navbar App",
+      component: <ShowcaseNavBar WebsiteName="name" />,
+    },
+    {
+      id: "movie-explorer",
+      name: "Movie Explorer",
+      component: <MovieExplorerApp />,
+    },
+    { id: "recipe-vault", name: "Recipe Vault", component: <RecipeVaultApp /> },
+  ];
+
   return (
     <BrowserRouter>
       <div className="">
         <nav className="bg-primary sticky top-0 z-10 shadow-lg">
-          <ul className="flex flex-wrap gap-4 overflow-x-auto p-4">
+          <ul className="flex flex-wrap gap-4 overflow-x-auto p-4 *:text-base *:hover:underline">
+            <Link to="/" className="text-accent font-bold">
+              Home
+            </Link>
             {myComponents.map(({ id, name }) => (
               <li key={id}>
-                <a href={`/${id}`} className="text-base hover:underline">
-                  {name}
-                </a>
+                <Link to={`/${id}`}>{name}</Link>
               </li>
             ))}
             {myWebApps.map(({ id, name }) => (
               <li key={id}>
-                <a href={`/${id}`} className="text-base hover:underline">
-                  {name}
-                </a>
+                <Link to={`/${id}`}>{name}</Link>
+              </li>
+            ))}
+            {routedApps.map(({ id, name }) => (
+              <li key={id}>
+                <Link to={`/${id}`}>{name}</Link>
               </li>
             ))}
           </ul>
@@ -114,6 +134,29 @@ export default function ComponentShowcase() {
         {myWebApps.map(({ id, component }) => (
           <Route key={id} path={`/${id}`} element={component} />
         ))}
+        <Route path="/" Component={null}></Route>
+        {/* NavBar routing with nested layout so NavBar persists across pages */}
+        <Route
+          path="/navbar-app/*"
+          element={<ShowcaseNavBar WebsiteName="Test Name" />}
+        >
+          <Route path="pages/about" element={<AboutPage />} />
+          <Route
+            path="pages/contact"
+            element={
+              <ContactPage
+                ContactMethodInfo={[
+                  "000-000-0000",
+                  "example@gmail.com",
+                  "123 abc Street",
+                  "@websiteSOCIAL",
+                ]}
+                ContactMethods={["Phone", "Email", "Address", "Twitter"]}
+              />
+            }
+          />
+          <Route path="pages/home" element={<HomePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
