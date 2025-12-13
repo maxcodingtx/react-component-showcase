@@ -25,9 +25,6 @@ import AboutPage from "../components/compound/Navbar/pages/about";
 import ContactPage from "../components/compound/Navbar/pages/contact";
 import HomePage from "../components/compound/Navbar/pages/home";
 
-import { RecipeVaultApp } from "../web-apps/RecipeVault/App";
-import { MovieExplorerApp } from "../web-apps/MovieExplorer/App";
-
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function ComponentShowcase() {
@@ -86,21 +83,6 @@ export default function ComponentShowcase() {
     },
   ];
 
-  // these apps have their own routing, import their app components separately
-  const routedApps = [
-    {
-      id: "navbar-app",
-      name: "Navbar App",
-      component: <ShowcaseNavBar WebsiteName="name" />,
-    },
-    {
-      id: "movie-explorer",
-      name: "Movie Explorer",
-      component: <MovieExplorerApp />,
-    },
-    { id: "recipe-vault", name: "Recipe Vault", component: <RecipeVaultApp /> },
-  ];
-
   return (
     <BrowserRouter>
       <div className="">
@@ -119,11 +101,7 @@ export default function ComponentShowcase() {
                 <Link to={`/${id}`}>{name}</Link>
               </li>
             ))}
-            {routedApps.map(({ id, name }) => (
-              <li key={id}>
-                <Link to={`/${id}`}>{name}</Link>
-              </li>
-            ))}
+            <Link to={`/navbar-app/pages/home`}>Navbar App</Link>
           </ul>
         </nav>
       </div>
