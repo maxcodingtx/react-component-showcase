@@ -1,12 +1,12 @@
 # Recipe Vault
 
-A feature-rich recipe browsing app built as a compound component demo. It showcases search and filtering, favorites with local storage, recipe details, and a simple meal planning flow using React context providers and React Router.
+A feature-rich recipe browsing app built as a compound component demo. It showcases search and filtering, favorites with local storage, recipe details, and a simple meal planning flow using Zustand and React Router.
 
 ## Overview
 
-- `RecipeVaultMain`: Router + providers wrapper for all pages.
+- `RecipeVaultMain`: Router wrapper for all pages.
 - `RecipeVaultApp`: Home view with search, listing, and favorite toggling.
-- Context hooks: `useRecipes`, `useFavorites`, `useMealPlan` with corresponding providers.
+- Zustand store: `useRecipeVaultStore` for recipes, favorites, and meal plan actions.
 - Data seed: `data/recipes.json` (typed via `types/recipe.ts`).
 
 ## Features
@@ -20,9 +20,9 @@ A feature-rich recipe browsing app built as a compound component demo. It showca
 ## File Structure
 
 - `App.tsx`: Main grid/list logic, search, and favorites toggle.
-- `main.tsx`: Wraps routes with providers and defines app routes.
+- `main.tsx`: Defines app routes.
 - `components/`: UI pieces (`NavBar`, `SearchBar`, `RecipeCard`, `FavoriteButton`, `FilterPanel`, `MealPlanCalendar`, `RecipeForm`).
-- `hooks/`: Context state (`useRecipes`, `useFavorites`, `useMealPlan`).
+- `store/RecipeStore.tsx`: Central Zustand state and actions.
 - `pages/`: Route-level screens (`Favorites`, `RecipeDetails`, `MealPlan`, `AddRecipe`).
 - `data/recipes.json`: Mock dataset.
 
@@ -38,7 +38,7 @@ export default function Showcase() {
 }
 ```
 
-Alternatively, if you already have a top-level router, use the building blocks:
+Alternatively, if you already have a top-level router, mount these routes inside your existing router:
 
 ```tsx
 import { Routes, Route } from "react-router";
@@ -49,47 +49,24 @@ import {
   MealPlan,
   AddRecipe,
 } from "../../compound/RecipeVault/pages/barrel";
-import {
-  RecipesProvider,
-  useRecipes,
-} from "../../compound/RecipeVault/hooks/useRecipes";
-import {
-  FavoritesProvider,
-  useFavorites,
-} from "../../compound/RecipeVault/hooks/useFavorites";
-import {
-  MealPlanProvider,
-  useMealPlan,
-} from "../../compound/RecipeVault/hooks/useMealPlan";
 
 export default function AppRoutes() {
-  const recipes = useRecipes();
-  const favorites = useFavorites();
-  const mealPlan = useMealPlan();
-
   return (
-    <RecipesProvider value={recipes}>
-      <FavoritesProvider value={favorites}>
-        <MealPlanProvider value={mealPlan}>
-          <Routes>
-            <Route path="/" element={<RecipeVaultApp />} />
-            <Route path="/favorites" element={<Favorites />} />
-            <Route path="/add-recipe" element={<AddRecipe />} />
-            <Route path="/recipe/:id" element={<RecipeDetails />} />
-            <Route path="/meal-plan" element={<MealPlan />} />
-          </Routes>
-        </MealPlanProvider>
-      </FavoritesProvider>
-    </RecipesProvider>
+    <Routes>
+      <Route path="/" element={<RecipeVaultApp />} />
+      <Route path="/favorites" element={<Favorites />} />
+      <Route path="/add-recipe" element={<AddRecipe />} />
+      <Route path="/recipe/:id" element={<RecipeDetails />} />
+      <Route path="/meal-plan" element={<MealPlan />} />
+    </Routes>
   );
 }
 ```
 
 ## State & Persistence
 
-- Recipes state is initialized from `recipes.json` and can be extended to support create/update/delete.
-- Favorites are stored in component state and persisted via `localStorage` key `favoriteRecipes`.
-- Meal plan state is kept in memory; extend to persist if desired.
+- Recipes state is initialized from `recipes.json` in the Zustand store and can be extended to support create/update/delete.
+- Favorites and meal plan are persisted in `localStorage` using the Zustand persist middleware (`recipe-vault-store`).
 
 ## Styling
 
