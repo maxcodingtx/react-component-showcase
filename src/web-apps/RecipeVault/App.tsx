@@ -4,18 +4,15 @@ import {
   FavoriteButton,
   NavBar,
 } from "./components/barrel";
-import { useState, useContext } from "react";
-import { RecipesProvider } from "./hooks/useRecipes";
-import { FavoritesProvider } from "./hooks/useFavorites";
+import { useState } from "react";
+import { useRecipeVaultStore } from "./store/RecipeStore";
 
 export const RecipeVaultApp = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const recipesContext = useContext(RecipesProvider);
-  const recipes = recipesContext?.recipes || [];
-
-  const favoritesContext = useContext(FavoritesProvider);
-  const favoriteRecipesIds = favoritesContext?.favorites || [];
+  const recipes = useRecipeVaultStore((state) => state.recipes);
+  const favoriteRecipesIds = useRecipeVaultStore((state) => state.favorites);
+  const toggleFavorite = useRecipeVaultStore((state) => state.toggleFavorite);
 
   const filteredRecipes = recipes.filter(
     (recipe) =>
@@ -53,7 +50,7 @@ export const RecipeVaultApp = () => {
                 <FavoriteButton
                   isFavorite={favoriteRecipesIds.includes(recipe.id)}
                   onToggle={() => {
-                    favoritesContext?.toggleFavorite(recipe.id);
+                    toggleFavorite(recipe.id);
                     console.log("Toggled favorite for recipe ID:", recipe.id);
                   }}
                 />

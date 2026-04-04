@@ -1,18 +1,16 @@
 import { useParams } from "react-router";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { type Recipe } from "../types/recipe";
 import data from "../data/recipes.json";
 import { FavoriteButton } from "../components/barrel";
 import { Link } from "react-router";
-import { FavoritesProvider } from "../hooks/useFavorites";
+import { useRecipeVaultStore } from "../store/RecipeStore";
 
 export const RecipeDetails = () => {
   const { id } = useParams<{ id: string }>();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
-
-  const favoritesContext = useContext(FavoritesProvider);
-
-  const favoriteRecipes = favoritesContext?.favorites || [];
+  const favoriteRecipes = useRecipeVaultStore((state) => state.favorites);
+  const toggleFavorite = useRecipeVaultStore((state) => state.toggleFavorite);
   useEffect(() => {
     if (id) {
       const foundRecipe = (data as Recipe[]).find((r) => r.id === parseInt(id));
@@ -119,7 +117,7 @@ export const RecipeDetails = () => {
             <FavoriteButton
               isFavorite={favoriteRecipes.includes(recipe.id)}
               onToggle={() => {
-                favoritesContext?.toggleFavorite(recipe.id);
+                toggleFavorite(recipe.id);
               }}
             />
             <button className="btn btn-primary">Add to Meal Plan</button>

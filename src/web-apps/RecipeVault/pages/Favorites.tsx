@@ -1,15 +1,11 @@
 import { RecipeCard } from "../components/barrel";
 import { type Recipe } from "../types/recipe";
-import { RecipesProvider } from "../hooks/useRecipes";
 import { Link } from "react-router";
-import { useContext } from "react";
-import { FavoritesProvider } from "../hooks/useFavorites";
+import { useRecipeVaultStore } from "../store/RecipeStore";
 
 export const Favorites = () => {
-  const recipesContext = useContext(RecipesProvider);
-  const recipes = recipesContext?.recipes || [];
-  const favoriteRecipesIds: number[] =
-    useContext(FavoritesProvider)?.favorites || [];
+  const recipes = useRecipeVaultStore((state) => state.recipes);
+  const favoriteRecipesIds = useRecipeVaultStore((state) => state.favorites);
   const favoriteRecipes: Recipe[] = recipes.filter((recipe) =>
     favoriteRecipesIds.includes(recipe.id),
   );

@@ -1,16 +1,16 @@
 import { type Recipe } from "../types/recipe";
 import { MealPlanCalendar } from "../components/barrel";
-import { MealPlanProvider } from "../hooks/useMealPlan";
-import { useContext } from "react";
 import { type MealPlanEntry } from "../components/MealPlanCalendar";
-import { RecipesProvider } from "../hooks/useRecipes";
 import { Link } from "react-router";
+import { useRecipeVaultStore } from "../store/RecipeStore";
 
 export const MealPlan = () => {
-  const recipesContext = useContext(RecipesProvider);
-  const recipes = recipesContext?.recipes || [];
-  const mealPlanContext = useContext(MealPlanProvider);
-  const mealPlan = mealPlanContext?.mealPlan || [];
+  const recipes = useRecipeVaultStore((state) => state.recipes);
+  const mealPlan = useRecipeVaultStore((state) => state.mealPlan);
+  const addToMealPlan = useRecipeVaultStore((state) => state.addToMealPlan);
+  const removeFromMealPlan = useRecipeVaultStore(
+    (state) => state.removeFromMealPlan,
+  );
 
   const handleAddMeal = (date: string, mealType: string, recipe: Recipe) => {
     const mealPlanEntry: MealPlanEntry = {
@@ -19,10 +19,10 @@ export const MealPlan = () => {
       mealType: mealType as MealPlanEntry["mealType"],
       recipe,
     };
-    mealPlanContext?.addToMealPlan(mealPlanEntry);
+    addToMealPlan(mealPlanEntry);
   };
   const handleRemoveMeal = (recipeId: string) => {
-    mealPlanContext?.removeFromMealPlan(recipeId);
+    removeFromMealPlan(recipeId);
   };
 
   return (

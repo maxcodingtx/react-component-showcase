@@ -1,15 +1,13 @@
 import { RecipeForm } from "../components/barrel";
 import { type Recipe } from "../types/recipe";
-import { RecipesProvider } from "../hooks/useRecipes";
 import { Link } from "react-router";
-import { useContext } from "react";
+import { useRecipeVaultStore } from "../store/RecipeStore";
 
 type NewRecipe = Omit<Recipe, "id">;
 
 export const AddRecipe = () => {
-  const recipesContext = useContext(RecipesProvider);
-  const recipes = recipesContext?.recipes || [];
-  const setRecipes = recipesContext?.setRecipes;
+  const recipes = useRecipeVaultStore((state) => state.recipes);
+  const setRecipes = useRecipeVaultStore((state) => state.setRecipes);
 
   return (
     <div className="grid place-items-center p-4">
@@ -25,7 +23,7 @@ export const AddRecipe = () => {
             recipes.length > 0 ? Math.max(...recipes.map((r) => r.id)) + 1 : 1;
           const recipeWithId: Recipe = { id: newRecipeId, ...newRecipe };
 
-          if (setRecipes) setRecipes([...recipes, recipeWithId]);
+          setRecipes([...recipes, recipeWithId]);
           console.log("Added new recipe:", recipeWithId);
         }}
       />
