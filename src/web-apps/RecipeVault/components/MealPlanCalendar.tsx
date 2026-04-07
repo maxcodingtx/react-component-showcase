@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { type Recipe } from "../types/recipe";
+import toast, { Toaster } from "react-hot-toast";
 
 export interface MealPlanEntry {
   id: string;
@@ -100,8 +101,17 @@ export default function MealPlanCalendar({
     "December",
   ];
 
+  const notifyAddMeal = () => {
+    toast.success("Meal added to plan!");
+  };
+
+  const notifyRemoveMeal = () => {
+    toast.error("Meal removed from plan!");
+  };
+
   return (
     <div className="mx-auto max-w-4xl p-4">
+      <Toaster />
       <div className="bg-base-200 mb-6 flex items-center justify-between rounded-lg p-4">
         <button
           className="btn btn-primary btn-sm"
@@ -198,7 +208,10 @@ export default function MealPlanCalendar({
                             <span className="text-sm">{meal.recipe.title}</span>
                             <button
                               className="btn btn-error btn-xs"
-                              onClick={() => onRemoveMeal(meal.id)}
+                              onClick={() => {
+                                onRemoveMeal(meal.id);
+                                notifyRemoveMeal();
+                              }}
                             >
                               ×
                             </button>
@@ -207,7 +220,9 @@ export default function MealPlanCalendar({
                     </div>
                     <button
                       className="btn btn-success btn-sm mt-2 w-full"
-                      onClick={() => handleAddMeal(mealType)}
+                      onClick={() => {
+                        handleAddMeal(mealType);
+                      }}
                     >
                       + Add {mealType}
                     </button>
@@ -228,7 +243,10 @@ export default function MealPlanCalendar({
                 <div
                   key={recipe.id}
                   className="card bg-base-200 hover:bg-base-300 cursor-pointer shadow transition-colors"
-                  onClick={() => handleRecipeSelect(recipe)}
+                  onClick={() => {
+                    handleRecipeSelect(recipe);
+                    notifyAddMeal();
+                  }}
                 >
                   <div className="card-body p-3">
                     <span className="font-medium">{recipe.title}</span>

@@ -6,6 +6,7 @@ import {
 } from "./components/barrel";
 import { useState } from "react";
 import { useRecipeVaultStore } from "./store/RecipeStore";
+import toast, { Toaster } from "react-hot-toast";
 
 export const RecipeVaultApp = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -20,6 +21,14 @@ export const RecipeVaultApp = () => {
       recipe.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       recipe.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
+
+  const notifyAddToFavorites = () => {
+    toast.success("Added to Favorites!");
+  };
+
+  const notifyRemoveFromFavorites = () => {
+    toast.error("Removed from Favorites!");
+  };
 
   return (
     <div>
@@ -51,9 +60,14 @@ export const RecipeVaultApp = () => {
                   isFavorite={favoriteRecipesIds.includes(recipe.id)}
                   onToggle={() => {
                     toggleFavorite(recipe.id);
-                    console.log("Toggled favorite for recipe ID:", recipe.id);
+                    if (favoriteRecipesIds.includes(recipe.id)) {
+                      notifyRemoveFromFavorites();
+                    } else {
+                      notifyAddToFavorites();
+                    }
                   }}
                 />
+                <Toaster />
               </div>
             </div>
           ))}
