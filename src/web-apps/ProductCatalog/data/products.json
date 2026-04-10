@@ -1,0 +1,33 @@
+[
+  { "id": 1, "name": "Smartphone", "price": 699, "category": "Electronics" },
+  { "id": 2, "name": "Laptop", "price": 1299, "category": "Electronics" },
+  { "id": 3, "name": "T-Shirt", "price": 29, "category": "Apparel" },
+  { "id": 4, "name": "Coffee Maker", "price": 99, "category": "Home Goods" },
+  { "id": 5, "name": "Jeans", "price": 59, "category": "Apparel" },
+  { "id": 6, "name": "Headphones", "price": 199, "category": "Electronics" },
+  { "id": 7, "name": "Blender", "price": 49, "category": "Home Goods" },
+  { "id": 8, "name": "Jacket", "price": 89, "category": "Apparel" },
+  { "id": 9, "name": "Tablet", "price": 399, "category": "Electronics" },
+  { "id": 10, "name": "Smart Watch", "price": 249, "category": "Electronics" },
+  {
+    "id": 11,
+    "name": "Wireless Keyboard",
+    "price": 79,
+    "category": "Electronics"
+  },
+  { "id": 12, "name": "Monitor", "price": 349, "category": "Electronics" },
+  { "id": 13, "name": "Sneakers", "price": 110, "category": "Apparel" },
+  { "id": 14, "name": "Hoodie", "price": 65, "category": "Apparel" },
+  { "id": 15, "name": "Dress", "price": 75, "category": "Apparel" },
+  { "id": 16, "name": "Scarf", "price": 22, "category": "Apparel" },
+  { "id": 17, "name": "Toaster", "price": 35, "category": "Home Goods" },
+  {
+    "id": 18,
+    "name": "Vacuum Cleaner",
+    "price": 189,
+    "category": "Home Goods"
+  },
+  { "id": 19, "name": "Air Purifier", "price": 129, "category": "Home Goods" },
+  { "id": 20, "name": "Desk Lamp", "price": 45, "category": "Home Goods" },
+  { "id": 21, "name": "Bed Sheets Set", "price": 55, "category": "Home Goods" }
+]
