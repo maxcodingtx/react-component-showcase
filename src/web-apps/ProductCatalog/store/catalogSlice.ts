@@ -2,6 +2,7 @@ import { createSlice, createSelector } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { ProductType } from "../ProductType";
 import type { RootState } from "./store";
+import productsData from "../data/products.json";
 
 type Category = ProductType["category"] | "All Categories";
 
@@ -11,17 +12,7 @@ interface CatalogState {
 }
 
 const initialState: CatalogState = {
-  products: [
-    { id: 1, name: "Smartphone", price: 699, category: "Electronics" },
-    { id: 2, name: "Laptop", price: 1299, category: "Electronics" },
-    { id: 3, name: "T-Shirt", price: 29, category: "Apparel" },
-    { id: 4, name: "Coffee Maker", price: 99, category: "Home Goods" },
-    { id: 5, name: "Jeans", price: 59, category: "Apparel" },
-    { id: 6, name: "Headphones", price: 199, category: "Electronics" },
-    { id: 7, name: "Blender", price: 49, category: "Home Goods" },
-    { id: 8, name: "Jacket", price: 89, category: "Apparel" },
-    { id: 9, name: "Tablet", price: 399, category: "Electronics" },
-  ],
+  products: productsData as ProductType[],
   selectedCategory: "All Categories",
 };
 
