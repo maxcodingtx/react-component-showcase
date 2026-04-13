@@ -2,176 +2,351 @@
   {
     "id": 1,
     "title": "The Shawshank Redemption",
-    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "description": "Two men build a long friendship while finding hope and redemption through kindness.",
     "year": 1994,
     "rating": 9.3
   },
   {
     "id": 2,
     "title": "The Godfather",
-    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "description": "The head of a powerful family business passes leadership responsibilities to his hesitant son.",
     "year": 1972,
     "rating": 9.2
   },
   {
     "id": 3,
     "title": "The Dark Knight",
-    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
+    "description": "Batman faces a chaotic rival while protecting Gotham and testing his values.",
     "year": 2008,
     "rating": 9.0
   },
   {
     "id": 4,
     "title": "Pulp Fiction",
-    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
+    "description": "Several characters in Los Angeles cross paths in a stylized and nonlinear story.",
     "year": 1994,
     "rating": 8.9
   },
   {
     "id": 5,
     "title": "Forrest Gump",
-    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and other historical events unfold from the perspective of an Alabama man.",
+    "description": "A kind man experiences major moments in American history with optimism and heart.",
     "year": 1994,
     "rating": 8.8
   },
   {
     "id": 6,
     "title": "Inception",
-    "description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "description": "A skilled dream navigator takes on a complex mission inside layered dream worlds.",
     "year": 2010,
     "rating": 8.8
   },
   {
     "id": 7,
     "title": "The Matrix",
-    "description": "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.",
+    "description": "A programmer discovers hidden truths about reality and joins a team seeking freedom.",
     "year": 1999,
     "rating": 8.7
   },
   {
     "id": 8,
     "title": "Goodfellas",
-    "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners.",
+    "description": "A man reflects on his years in a high-stakes world and the choices he made.",
     "year": 1990,
     "rating": 8.7
   },
   {
     "id": 9,
     "title": "The Lord of the Rings: The Return of the King",
-    "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom.",
+    "description": "Friends unite in a final quest to protect Middle-earth and bring peace.",
     "year": 2003,
     "rating": 8.9
   },
   {
     "id": 10,
     "title": "Fight Club",
-    "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+    "description": "An office worker forms an unusual friendship that leads to unexpected life changes.",
     "year": 1999,
     "rating": 8.8
   },
   {
     "id": 11,
     "title": "Star Wars: Episode V - The Empire Strikes Back",
-    "description": "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda.",
+    "description": "Heroes regroup after a major setback while Luke begins advanced Jedi training.",
     "year": 1980,
     "rating": 8.7
   },
   {
     "id": 12,
     "title": "One Flew Over the Cuckoo's Nest",
-    "description": "A criminal pleads insanity and is admitted to a mental institution, where he rebels against the oppressive nurse and rallies up the scared patients.",
+    "description": "A spirited newcomer inspires patients at a care facility to find their voices.",
     "year": 1975,
     "rating": 8.7
   },
   {
     "id": 13,
     "title": "Interstellar",
-    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "description": "A team of explorers travels through space to help secure humanity's future.",
     "year": 2014,
     "rating": 8.6
   },
   {
     "id": 14,
     "title": "Parasite",
-    "description": "A poor family schemes to become employed by a wealthy family by infiltrating their household and posing as unrelated, highly qualified individuals.",
+    "description": "A family uses clever planning to enter the world of a wealthy household.",
     "year": 2019,
     "rating": 8.6
   },
   {
     "id": 15,
     "title": "The Silence of the Lambs",
-    "description": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer.",
+    "description": "A young investigator seeks insight from a difficult source to solve a major case.",
     "year": 1991,
     "rating": 8.6
   },
   {
     "id": 16,
     "title": "Saving Private Ryan",
-    "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+    "description": "A military squad takes on a challenging mission during World War II.",
     "year": 1998,
     "rating": 8.6
   },
   {
     "id": 17,
     "title": "Spirited Away",
-    "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits.",
+    "description": "A young girl enters a magical world and learns courage, kindness, and resilience.",
     "year": 2001,
     "rating": 9.3
   },
   {
     "id": 18,
     "title": "The Green Mile",
-    "description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+    "description": "A prison guard discovers that one resident has a remarkable and compassionate gift.",
     "year": 1999,
     "rating": 8.6
   },
   {
     "id": 19,
     "title": "Life Is Beautiful",
-    "description": "When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor, and imagination to protect his son.",
+    "description": "A father uses humor and imagination to keep hope alive for his son during hard times.",
     "year": 1997,
     "rating": 8.6
   },
   {
     "id": 20,
     "title": "Seven",
-    "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+    "description": "Two detectives work together on a difficult mystery with a symbolic pattern.",
     "year": 1995,
     "rating": 8.6
   },
   {
     "id": 21,
     "title": "The Usual Suspects",
-    "description": "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",
+    "description": "A survivor recounts a complex sequence of events tied to a mysterious figure.",
     "year": 1995,
     "rating": 8.5
   },
   {
     "id": 22,
-    "title": "Léon: The Professional",
-    "description": "12-year-old Mathilda is reluctantly taken in by Léon, a professional assassin, after her family is murdered by corrupt DEA agents.",
+    "title": "Leon: The Professional",
+    "description": "A young girl and a reserved mentor form an unexpected bond in a tense city setting.",
     "year": 1994,
     "rating": 8.5
   },
   {
     "id": 23,
     "title": "City of God",
-    "description": "In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.",
+    "description": "In Rio, two childhood friends follow very different paths while growing up.",
     "year": 2002,
     "rating": 8.6
   },
   {
     "id": 24,
     "title": "The Pianist",
-    "description": "A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.",
+    "description": "A gifted musician relies on resilience and hope during wartime hardship.",
     "year": 2002,
     "rating": 8.5
   },
   {
     "id": 25,
     "title": "American Beauty",
-    "description": "A frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
+    "description": "A suburban family faces personal change while searching for meaning and connection.",
     "year": 1999,
     "rating": 8.3
+  },
+  {
+    "id": 26,
+    "title": "The Lion King",
+    "description": "A young lion prince learns responsibility and returns home to restore balance.",
+    "year": 1994,
+    "rating": 8.5
+  },
+  {
+    "id": 27,
+    "title": "Toy Story",
+    "description": "Two very different toys learn teamwork while helping each other get home.",
+    "year": 1995,
+    "rating": 8.3
+  },
+  {
+    "id": 28,
+    "title": "Finding Nemo",
+    "description": "A devoted father crosses the ocean to reunite with his adventurous son.",
+    "year": 2003,
+    "rating": 8.2
+  },
+  {
+    "id": 29,
+    "title": "Up",
+    "description": "A widower and a young scout share an uplifting journey full of heart.",
+    "year": 2009,
+    "rating": 8.3
+  },
+  {
+    "id": 30,
+    "title": "Coco",
+    "description": "A music-loving boy explores family history and discovers the value of remembrance.",
+    "year": 2017,
+    "rating": 8.4
+  },
+  {
+    "id": 31,
+    "title": "Inside Out",
+    "description": "A young girl and her emotions learn to navigate big life changes together.",
+    "year": 2015,
+    "rating": 8.1
+  },
+  {
+    "id": 32,
+    "title": "The Incredibles",
+    "description": "A family of superheroes works together to protect their city and each other.",
+    "year": 2004,
+    "rating": 8.0
+  },
+  {
+    "id": 33,
+    "title": "Ratatouille",
+    "description": "A talented rat follows his culinary dream with help from an unlikely friend.",
+    "year": 2007,
+    "rating": 8.1
+  },
+  {
+    "id": 34,
+    "title": "WALL-E",
+    "description": "A curious robot begins an adventure that helps humanity reconnect with Earth.",
+    "year": 2008,
+    "rating": 8.4
+  },
+  {
+    "id": 35,
+    "title": "Zootopia",
+    "description": "A rookie officer and a clever fox solve a citywide mystery through teamwork.",
+    "year": 2016,
+    "rating": 8.0
+  },
+  {
+    "id": 36,
+    "title": "Moana",
+    "description": "A brave teenager sails across the ocean to save her island community.",
+    "year": 2016,
+    "rating": 7.9
+  },
+  {
+    "id": 37,
+    "title": "How to Train Your Dragon",
+    "description": "A young Viking and a dragon form a friendship that changes their world.",
+    "year": 2010,
+    "rating": 8.1
+  },
+  {
+    "id": 38,
+    "title": "Kiki's Delivery Service",
+    "description": "A young witch gains confidence while starting an independent delivery service.",
+    "year": 1989,
+    "rating": 7.8
+  },
+  {
+    "id": 39,
+    "title": "My Neighbor Totoro",
+    "description": "Two sisters discover wonder and friendship in a peaceful countryside setting.",
+    "year": 1988,
+    "rating": 8.1
+  },
+  {
+    "id": 40,
+    "title": "Paddington 2",
+    "description": "Paddington spreads kindness while trying to clear up a big misunderstanding.",
+    "year": 2017,
+    "rating": 7.8
+  },
+  {
+    "id": 41,
+    "title": "The Princess Bride",
+    "description": "A charming fantasy adventure mixes humor, friendship, and true love.",
+    "year": 1987,
+    "rating": 8.0
+  },
+  {
+    "id": 42,
+    "title": "Hidden Figures",
+    "description": "Brilliant mathematicians help advance NASA's missions and inspire generations.",
+    "year": 2016,
+    "rating": 7.8
+  },
+  {
+    "id": 43,
+    "title": "The Martian",
+    "description": "An astronaut uses science, creativity, and teamwork to find a way home.",
+    "year": 2015,
+    "rating": 8.0
+  },
+  {
+    "id": 44,
+    "title": "Spider-Man: Into the Spider-Verse",
+    "description": "Miles Morales discovers his powers and joins heroes from many universes.",
+    "year": 2018,
+    "rating": 8.4
+  },
+  {
+    "id": 45,
+    "title": "Wreck-It Ralph",
+    "description": "An arcade game character sets out to prove he can be a hero.",
+    "year": 2012,
+    "rating": 7.7
+  },
+  {
+    "id": 46,
+    "title": "The Sound of Music",
+    "description": "A lively governess brings music and joy to a family in the Austrian Alps.",
+    "year": 1965,
+    "rating": 8.1
+  },
+  {
+    "id": 47,
+    "title": "The Truman Show",
+    "description": "A man begins to question his routine and follows clues toward the truth.",
+    "year": 1998,
+    "rating": 8.2
+  },
+  {
+    "id": 48,
+    "title": "The Secret Life of Walter Mitty",
+    "description": "A daydreamer steps into real adventures and discovers new confidence.",
+    "year": 2013,
+    "rating": 7.3
+  },
+  {
+    "id": 49,
+    "title": "School of Rock",
+    "description": "A substitute teacher helps students find creativity and confidence through music.",
+    "year": 2003,
+    "rating": 7.2
+  },
+  {
+    "id": 50,
+    "title": "Akeelah and the Bee",
+    "description": "A gifted student and her mentors work together toward a spelling competition dream.",
+    "year": 2006,
+    "rating": 7.4
   }
 ]
