@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState } from "react";
 import {
   createColumnHelper,
   getCoreRowModel,
@@ -12,9 +12,14 @@ import { type MovieProps } from "./components/MovieCard";
 import { MovieList, Navbar, SearchBar } from "./components/barrel";
 
 type FavoritesMap = Record<string, MovieProps>;
+const columnHelper = createColumnHelper<MovieProps>();
+const columns = [
+  columnHelper.accessor("id", {
+    header: "ID",
+  }),
+];
 
 export const MovieExplorerApp = () => {
-  const [movies, setMovies] = useState<MovieProps[]>([]);
   const [favorites, setFavorites] = useState<FavoritesMap>({});
   const [searchQuery, setSearchQuery] = useState("");
   const [pagination, setPagination] = useState<PaginationState>({
@@ -22,29 +27,14 @@ export const MovieExplorerApp = () => {
     pageSize: 8,
   });
 
-  useEffect(() => {
-    setMovies(moviesData);
-  }, []);
+  const movies = moviesData as MovieProps[];
 
-  const filteredMovies = useMemo(
-    () =>
-      movies.filter(
-        (movie) =>
-          movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          movie.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          movie.year.toString().includes(searchQuery),
-      ),
-    [movies, searchQuery],
+  const filteredMovies = movies.filter(
+    (movie) =>
+      movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      movie.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      movie.year.toString().includes(searchQuery),
   );
-
-  const columns = useMemo(() => {
-    const columnHelper = createColumnHelper<MovieProps>();
-    return [
-      columnHelper.accessor("id", {
-        header: "ID",
-      }),
-    ];
-  }, []);
 
   const table = useReactTable({
     data: filteredMovies,
@@ -56,11 +46,17 @@ export const MovieExplorerApp = () => {
     getPaginationRowModel: getPaginationRowModel(),
   });
 
-  useEffect(() => {
-    setPagination((prev) => ({ ...prev, pageIndex: 0 }));
-  }, [searchQuery]);
-
   const paginatedMovies = table.getRowModel().rows.map((row) => row.original);
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    setPagination((prev) => ({ ...prev, pageIndex: 0 }));
+  };
+
+  const handleSearchClear = () => {
+    setSearchQuery("");
+    setPagination((prev) => ({ ...prev, pageIndex: 0 }));
+  };
 
   const handleToggleFavorite = (id: number) => {
     const movieId = id.toString();
@@ -84,8 +80,8 @@ export const MovieExplorerApp = () => {
       <Navbar favoritesCount={Object.keys(favorites).length} />
       <SearchBar
         query={searchQuery}
-        onChange={(query) => setSearchQuery(query)}
-        onClear={() => setSearchQuery("")}
+        onChange={handleSearchChange}
+        onClear={handleSearchClear}
       />
       <MovieList
         movies={paginatedMovies}
