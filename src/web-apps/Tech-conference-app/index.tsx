@@ -11,18 +11,14 @@ import "./index.css";
 export default function TechConferenceApp() {
   return (
     <main
-      className="bg-[url('./images/main-bg.png')] bg-cover bg-center bg-no-repeat font-[roboto]"
+      className="font-roboto bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${mainBackground})` }}
     >
-      <Hero></Hero>
-      <section className="md:grid md:grid-cols-2">
-        <Sponsors></Sponsors>
-        <Information></Information>
-      </section>
-      <section>
-        <Speakers></Speakers>
-        <Footer></Footer>
-      </section>
+      <Hero />
+      <Sponsors />
+      <Information />
+      <Speakers />
+      <Footer />
     </main>
   );
 }
