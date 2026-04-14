@@ -1,83 +1,114 @@
-import React from "react";
-import informationIconSprite from "../images/information-icon-sprite.png";
+import { motion } from "motion/react";
+import { Code2, Cpu, MapPin, Ticket, type LucideIcon } from "lucide-react";
 
-export const Information: React.FC = () => {
+const venueItems = [
+  {
+    icon: MapPin,
+    title: "123 Convention Center",
+    description:
+      "Located in the heart of San Francisco, a world-class venue built for the biggest minds in tech.",
+  },
+  {
+    icon: Ticket,
+    title: "$99 / ticket",
+    description:
+      "Early bird pricing available for a limited time. Includes full access to all sessions and workshops.",
+  },
+];
+
+const featureItems = [
+  {
+    icon: Code2,
+    title: "Workshops",
+    description:
+      "Hands-on sessions led by industry experts covering the latest tools, frameworks, and methodologies.",
+  },
+  {
+    icon: Cpu,
+    title: "Hackathon",
+    description:
+      "48-hour coding challenge with $10k in prizes. Build alongside the best engineers in the world.",
+  },
+];
+
+const InfoCard = ({
+  icon: Icon,
+  title,
+  description,
+}: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}) => (
+  <div className="rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-colors hover:border-cyan-500/30">
+    <div className="mb-3 inline-flex rounded-lg bg-cyan-500/10 p-2">
+      <Icon className="h-5 w-5 text-cyan-400" />
+    </div>
+    <p className="mb-1 font-semibold text-white">{title}</p>
+    <p className="text-xs leading-relaxed text-gray-500">{description}</p>
+  </div>
+);
+
+const container = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0 },
+};
+
+export const Information = () => {
   return (
-    <section className="font-roboto px-3 py-9 *:mx-auto *:block *:max-w-[720px]">
-      {/* Venue & Tickets */}
-      <section>
-        <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
-          Venue & Tickets
-        </h1>
-        <div className="my-3 flex justify-between border-b-2 border-b-indigo-950 py-3 *:w-4/7">
-          <div className="border-r border-r-indigo-950">
-            {/* icon */}
-            <div
-              className="mx-auto h-[64px] w-[64px] bg-cover"
-              style={{ backgroundImage: `url(${informationIconSprite})` }}
-            ></div>
-
-            <p className="my-3 text-center font-semibold text-white">
-              123 Convention Center
-            </p>
-            <p className="px-3 text-center text-xs text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              vel similique! Labore qui earum totam iste, nulla vel ut possimus!
-            </p>
-          </div>
-          <div className="border-l border-l-indigo-950">
-            {/* icon */}
-            <div
-              className="mx-auto h-[64px] w-[64px] bg-cover bg-position-[center_top_33%]"
-              style={{ backgroundImage: `url(${informationIconSprite})` }}
-            ></div>
-
-            <p className="my-3 text-center font-semibold text-white">$99</p>
-            <p className="px-3 text-center text-xs text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              vel similique! Labore qui earum totam iste, nulla vel ut possimus!
-            </p>
-          </div>
+    <section className="px-6 py-20">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 md:grid-cols-2 md:divide-x md:divide-white/5">
+        {/* Venue & Tickets */}
+        <div>
+          <span className="mb-2 block text-xs font-medium tracking-widest text-cyan-400 uppercase">
+            Details
+          </span>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            Venue & Tickets
+          </h2>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mt-6 grid grid-cols-2 gap-4"
+          >
+            {venueItems.map((props) => (
+              <motion.div key={props.title} variants={item}>
+                <InfoCard {...props} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </section>
-      {/* Event Features */}
-      <section>
-        <h1 className="text-center text-2xl font-bold text-white">
-          Event Features
-        </h1>
-        <div className="my-3 flex justify-between py-3 *:w-4/7">
-          <div className="border-r border-r-indigo-950">
-            {/* icon */}
-            <div
-              className="mx-auto h-[64px] w-[64px] bg-cover bg-position-[center_bottom_33.33%]"
-              style={{ backgroundImage: `url(${informationIconSprite})` }}
-            ></div>
 
-            <p className="my-3 text-center font-semibold text-white">
-              Workshops
-            </p>
-            <p className="px-3 text-center text-xs text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              vel similique! Labore qui earum totam iste, nulla vel ut possimus!
-            </p>
-          </div>
-          <div className="border-l border-l-indigo-950">
-            {/* icon */}
-            <div
-              className="mx-auto h-[64px] w-[64px] bg-cover bg-position-[center_bottom]"
-              style={{ backgroundImage: `url(${informationIconSprite})` }}
-            ></div>
-
-            <p className="my-3 text-center font-semibold text-white">
-              Hackathon
-            </p>
-            <p className="px-3 text-center text-xs text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
-              vel similique! Labore qui earum totam iste, nulla vel ut possimus!
-            </p>
-          </div>
+        {/* Event Features */}
+        <div className="md:pl-12">
+          <span className="mb-2 block text-xs font-medium tracking-widest text-cyan-400 uppercase">
+            Programme
+          </span>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            Event Features
+          </h2>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="mt-6 grid grid-cols-2 gap-4"
+          >
+            {featureItems.map((props) => (
+              <motion.div key={props.title} variants={item}>
+                <InfoCard {...props} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </section>
+      </div>
     </section>
   );
 };
