@@ -1,5 +1,4 @@
-import React from "react";
-// import genericBackground from "../images/generic-bg.png";
+import { motion } from "motion/react";
 
 const logos = Object.values(
   import.meta.glob("../images/logo-sponsors/*.png", {
@@ -9,22 +8,39 @@ const logos = Object.values(
   }),
 ) as string[];
 
-export const Sponsors: React.FC = () => {
+const container = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.08 } },
+};
+
+const item = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: { opacity: 1, scale: 1 },
+};
+
+export const Sponsors = () => {
   return (
-    <section className="px-3 py-9 *:mx-auto">
-      <h1 className="text-center text-2xl font-bold text-white md:text-4xl">
-        Our Sponsors
-      </h1>
-      <div className="mt-12 grid grid-cols-2 gap-8 px-3 md:h-[calc(100%-4rem)]">
+    <section className="border-y border-white/5 px-6 py-10">
+      <p className="mb-6 text-center text-xs font-medium tracking-widest text-gray-500 uppercase">
+        Backed by industry leaders
+      </p>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="flex flex-wrap items-center justify-center gap-8 md:gap-16"
+      >
         {logos.map((logo, index) => (
-          <img
-            key={index + 1}
+          <motion.img
+            key={index}
+            variants={item}
             src={logo}
-            alt={`Sponsor Logo ${index + 1}`}
-            className="mx-auto my-auto w-[160px]"
+            alt={`Sponsor ${index + 1}`}
+            className="h-10 w-auto object-contain opacity-40 grayscale transition hover:opacity-90 hover:grayscale-0"
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
