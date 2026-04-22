@@ -1,4 +1,3 @@
-import type React from "react";
 import Gear from "../images/gear-icon.png";
 import Shield from "../images/shield-icon.png";
 import Battery from "../images/battery-icon.png";
@@ -9,46 +8,58 @@ interface OverviewProps {
   factsInfo: [string, string, string, string];
 }
 
-export const OverviewSection: React.FC<OverviewProps> = ({
-  facts,
-  factsInfo,
-}) => {
-  const colors = [
-    "oklch(91.7% 0.06 205.041)", // cyan
-    "oklch(88.5% 0.20 18.334)", // red
-    "oklch(88% 0.25 274.039)", // indigo
-    "oklch(90.1% 0.09 70.697)", // orange
+export function OverviewSection({ facts, factsInfo }: OverviewProps) {
+  const topAccents = [
+    "#4dd0e1", // cyan
+    "#f87171", // rose
+    "#818cf8", // indigo
+    "#fbbf24", // amber
+  ];
+
+  const iconGlows = [
+    "drop-shadow(0 0 7px rgba(77,208,225,0.7))",
+    "drop-shadow(0 0 7px rgba(248,113,113,0.7))",
+    "drop-shadow(0 0 7px rgba(129,140,248,0.7))",
+    "drop-shadow(0 0 7px rgba(251,191,36,0.7))",
   ];
 
   const iconsUrl = [Gear, Gear, Battery, Shield];
-  const iconsBG = [
-    "oklch(86.5% 0.13 207.078)", // cyan
-    "oklch(80.8% 0.25 19.571)", // red
-    "oklch(78.5% 0.30 274.713)", // indigo
-    "oklch(83.7% 0.14 66.29)", // orange
-  ];
 
   return (
-    <section className="mt-3 grid grid-cols-2 grid-rows-2 gap-10">
-      {facts.map((fact, index) => (
-        <div
-          key={index}
-          className="flex rounded-xl px-4 py-4 opacity-80"
-          style={{ backgroundColor: colors[index] }}
-        >
+    <section className="mt-10">
+      <p className="mb-5 font-['Syne',sans-serif] text-xs tracking-[0.25em] text-[var(--mb-text-secondary)] uppercase">
+        Engineered For
+      </p>
+      <div className="grid grid-cols-2 grid-rows-2 gap-5">
+        {facts.map((fact, index) => (
           <div
             key={index}
-            className="mr-4 max-w-8 self-start rounded p-2"
-            style={{ backgroundColor: iconsBG[index] }}
+            className="flex rounded-xl border border-[var(--mb-border)] bg-[var(--mb-surface)] px-5 py-5 [border-top:2px_solid_var(--card-accent)]"
+            style={
+              { "--card-accent": topAccents[index] } as React.CSSProperties
+            }
           >
-            <img src={iconsUrl[index]} alt="Gear icon" />
+            <div className="mr-4 shrink-0 self-start rounded-lg bg-white/[0.06] p-2">
+              <img
+                src={iconsUrl[index]}
+                alt={fact}
+                className="w-6 [filter:brightness(0)_invert(1)_var(--icon-glow)]"
+                style={
+                  { "--icon-glow": iconGlows[index] } as React.CSSProperties
+                }
+              />
+            </div>
+            <div>
+              <h2 className="mb-1 font-['Syne',sans-serif] text-base font-semibold text-[var(--mb-text-primary)]">
+                {fact}
+              </h2>
+              <p className="font-['DM_Sans',sans-serif] text-sm leading-relaxed text-[var(--mb-text-secondary)]">
+                {factsInfo[index]}
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="mb-2 text-xl font-bold">{fact}</h1>
-            <p className="text-sm font-semibold">{factsInfo[index]}</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
-};
+}

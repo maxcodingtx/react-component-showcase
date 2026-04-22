@@ -1,35 +1,38 @@
-import type { JSX } from "react";
 import AppleLogo from "../images/apple-logo.png";
 
-const Logo = (): JSX.Element => {
+const Logo = () => {
   return (
-    <div className="">
-      <img className="w-10" src={AppleLogo} alt="Apple Logo" />
+    <div>
+      <img
+        className="w-8 opacity-90 brightness-0 invert"
+        src={AppleLogo}
+        alt="Apple Logo"
+      />
     </div>
   );
 };
 
-const NavLinks = (): JSX.Element => {
+const NavLinks = () => {
   return (
-    <div className="flex">
-      <a className="mr-5 text-lg font-semibold" href="#">
-        Overview
-      </a>
-      <a className="mr-5 text-lg font-semibold" href="#">
-        Pricing
-      </a>
-      <a className="text-lg font-semibold" href="#">
-        Features
-      </a>
+    <div className="flex gap-8">
+      {["Overview", "Pricing", "Features"].map((label) => (
+        <a
+          key={label}
+          href="#"
+          className="group font-600 relative font-['Syne',sans-serif] text-xs tracking-[0.18em] text-[var(--mb-text-secondary)] uppercase"
+        >
+          {label}
+          <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-[var(--mb-gold)] transition-all duration-300 group-hover:w-full" />
+        </a>
+      ))}
     </div>
   );
 };
 
-export const NavBar = (): JSX.Element => {
+export const NavBar = () => {
   return (
-    <nav className="my-3 flex items-center justify-between">
+    <nav className="my-3 flex items-center justify-between rounded-xl border border-[var(--mb-border)] bg-[var(--mb-surface)] px-5 py-3 backdrop-blur-[12px]">
       <Logo />
-
       <NavLinks />
     </nav>
   );

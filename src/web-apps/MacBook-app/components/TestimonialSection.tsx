@@ -1,4 +1,3 @@
-import type React from "react";
 import UserIconOrange from "../images/user-icon-orange.jpg";
 import UserIconIndigo from "../images/user-icon-indigo.jpg";
 import UserIconRed from "../images/user-icon-red.jpg";
@@ -10,41 +9,51 @@ interface TestimonialsProps {
   names: [string, string, string, string];
 }
 
-export const TestimonialSection: React.FC<TestimonialsProps> = ({
-  testimonies,
-  names,
-}) => {
+export function TestimonialSection({ testimonies, names }: TestimonialsProps) {
   const iconURLS = [UserIconIndigo, UserIconRed, UserIconOrange, UserIconCyan];
-  const colors = [
-    "bg-indigo-300",
-    "bg-red-300",
-    "bg-orange-300",
-    "bg-cyan-300",
-  ];
+  const ringColors = ["#818cf8", "#f87171", "#fbbf24", "#4dd0e1"];
 
   return (
-    <section>
-      {testimonies.map((testimony, index) => {
-        return (
+    <section className="my-14 pb-10">
+      <p className="mb-1 font-['Syne',sans-serif] text-xs tracking-[0.25em] text-[var(--mb-text-secondary)] uppercase">
+        What People Say
+      </p>
+      <h2 className="mb-8 font-['Cormorant_Garamond',serif] text-5xl font-light text-[var(--mb-text-primary)]">
+        Testimonials
+      </h2>
+
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        {testimonies.map((testimony, index) => (
           <div
             key={index}
-            className={`my-5 flex justify-around rounded-2xl px-8 py-4 ${colors[index]}`}
+            className="relative overflow-hidden rounded-2xl border border-[var(--mb-border)] bg-[var(--mb-surface)] px-6 py-6"
           >
-            <div className="w-1/10">
-              <img
-                className="mt-2 w-14 rounded-full"
-                src={iconURLS[index]}
-                alt="User Icon"
-              />
-            </div>
+            <span className="pointer-events-none absolute -top-2 right-4 font-['Cormorant_Garamond',serif] text-9xl leading-none text-white/[0.05] select-none">
+              &ldquo;
+            </span>
 
-            <div className="w-9/10">
-              <p className="text-lg font-semibold">{testimony}</p>
-              <p>{names[index]}</p>
+            <p className="mb-3 text-xs tracking-widest text-[var(--mb-gold)]">
+              ★★★★★
+            </p>
+
+            <p className="mb-6 font-['DM_Sans',sans-serif] text-sm leading-relaxed text-[var(--mb-text-secondary)]">
+              {testimony}
+            </p>
+
+            <div className="flex items-center gap-3">
+              <img
+                src={iconURLS[index]}
+                alt={names[index]}
+                className="h-9 w-9 rounded-full object-cover [outline:2px_solid_var(--ring)] outline-offset-2"
+                style={{ "--ring": ringColors[index] } as React.CSSProperties}
+              />
+              <p className="font-['Syne',sans-serif] text-xs font-semibold tracking-wider text-[var(--mb-text-primary)] uppercase">
+                {names[index]}
+              </p>
             </div>
           </div>
-        );
-      })}
+        ))}
+      </div>
     </section>
   );
-};
+}
