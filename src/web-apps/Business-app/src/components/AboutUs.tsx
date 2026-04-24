@@ -1,21 +1,29 @@
-import React from "react";
 import aboutUsImage from "../images/about-us-image.png";
 
-const AboutUs: React.FC = () => {
+const AboutUs = () => {
   return (
-    <section className="">
-      <h1 className="mx-5 my-3 mb-4 font-[Avenir] text-2xl font-bold text-[#053052] md:my-6 md:text-5xl">
-        Our Creative Story Begins
-      </h1>
-      <div className="border-t border-b-1 border-t-black border-b-black md:flex">
-        <img className="h-auto w-full md:w-1/2" src={aboutUsImage} alt="" />
+    <section className="bg-[var(--color-bg)]">
+      <div className="relative overflow-hidden px-5 py-4 md:py-8">
+        <span className="section-numeral absolute -top-4 left-2 select-none">
+          01
+        </span>
+        <h1 className="relative font-[Cormorant_Garamond] text-3xl font-semibold text-[var(--color-text)] md:text-6xl">
+          Our Creative Story Begins
+        </h1>
+      </div>
 
-        {/* who we are */}
-        <div className="px-3 pt-7 md:w-1/2 md:pb-20 md:pl-8">
-          <h1 className="mb-2 font-[Avenir] text-2xl font-bold text-[#053052] md:mb-8 md:text-4xl">
+      <div className="border-t border-b border-[var(--color-border)] md:flex">
+        <img
+          className="h-auto w-full object-cover grayscale transition-[filter] duration-500 hover:grayscale-0 md:w-1/2"
+          src={aboutUsImage}
+          alt="About us"
+        />
+
+        <div className="px-5 pt-8 pb-12 md:w-1/2 md:pl-10">
+          <h2 className="mb-6 font-[Cormorant_Garamond] text-2xl font-semibold text-[var(--color-text)] md:text-4xl">
             Who We Are
-          </h1>
-          <p className="font-[Quicksand] font-light md:w-96 md:text-xl">
+          </h2>
+          <p className="pull-quote font-[Jost] text-base leading-relaxed font-light md:max-w-sm md:text-lg">
             We are a team of passionate individuals dedicated to delivering the
             best services to our clients. Our mission is to help businesses grow
             and succeed through innovative solutions.

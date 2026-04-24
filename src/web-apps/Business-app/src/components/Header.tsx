@@ -1,26 +1,23 @@
-// header jsx element
-
-import React from "react";
-import BurgerIcon from "../images/burger-icon.png";
+import { Menu } from "lucide-react";
 import Logo from "../images/Logo.png";
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
-    <header className="flex items-center justify-between border-b-1 border-b-black bg-white px-5 py-7 text-white">
-      <div className="flex items-center">
+    <header className="flex items-center justify-between border-b border-b-[var(--color-border)] bg-[var(--color-bg)] px-5 py-5">
+      <div className="flex items-center gap-3">
         <img
-          className="mr-3 size-10 rounded-full border-1 border-black p-1"
+          className="size-9 rounded-full border border-[var(--color-accent)] p-1"
           src={Logo}
           alt="Website Logo"
         />
-        <p className="font-[Avenir] font-light text-black">Foo, Our Website</p>
+        <p className="font-[Cormorant_Garamond] text-lg tracking-wide text-[var(--color-text)]">
+          Foo, Our Website
+        </p>
       </div>
 
-      {/* Burger icon: visible on smaller screens*/}
-      <img className="size-5 md:hidden" src={BurgerIcon} alt="Burger Icon" />
+      <Menu className="size-5 text-[var(--color-text)] md:hidden" />
 
-      {/* Button: visible >= 768px */}
-      <button className="hidden rounded-2xl bg-[#053052] px-8 py-1 font-[Quicksand] font-light text-white md:block">
+      <button className="hidden border border-[var(--color-accent)] px-7 py-1.5 font-[Jost] text-sm tracking-widest text-[var(--color-accent)] uppercase transition-colors duration-300 hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] md:block">
         Menu
       </button>
     </header>

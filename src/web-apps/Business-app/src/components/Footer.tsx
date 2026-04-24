@@ -1,75 +1,85 @@
-import React from "react";
-
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-[#ece4a9] *:text-[#053052]">
-      <h1 className="px-3 py-5 font-[Avenir] text-3xl font-bold md:text-4xl">
+    <footer className="bg-[var(--color-surface)] text-[var(--color-text)]">
+      <h1 className="px-5 py-6 font-[Cormorant_Garamond] text-4xl font-semibold tracking-wide md:text-5xl">
         Foo
       </h1>
-      <hr className="md:hidden" />
 
-      <div className="*:p-3 md:grid md:grid-cols-4 md:text-2xl md:*:flex md:*:flex-col md:*:justify-center md:*:px-6 md:*:py-12">
-        <div className="col-span-2 font-[Quicksand] md:border-y">
-          <h4 className="py-3 text-xl font-bold">Your Creative Partner</h4>
-          <p>Email *</p>
-          <div className="max-w-1/2">
+      <hr className="border-[var(--color-border)] md:hidden" />
+
+      <div className="*:p-4 md:grid md:grid-cols-4 md:*:flex md:*:flex-col md:*:justify-center md:*:px-7 md:*:py-12">
+        <div className="col-span-2 font-[Jost] md:border-y md:border-[var(--color-border)]">
+          <h4 className="pb-3 text-sm font-medium tracking-widest text-[var(--color-accent)] uppercase">
+            Your Creative Partner
+          </h4>
+          <p className="mb-1 text-xs font-light tracking-wider text-[var(--color-text-muted)] uppercase">
+            Email
+          </p>
+          <div className="max-w-xs">
             <input
-              className="my-3 w-full border-b border-b-black"
+              className="my-2 w-full border-b border-[var(--color-accent)] bg-transparent pb-1 text-sm text-[var(--color-text)] outline-none placeholder:text-[var(--color-text-muted)]"
               type="text"
+              placeholder="your@email.com"
             />
             <button
-              className="w-full border border-black py-2 hover:bg-[#053052] hover:text-white"
+              className="group mt-2 flex items-center gap-2 font-[Jost] text-sm font-medium tracking-widest text-[var(--color-accent)] uppercase transition-transform duration-300 hover:translate-x-1"
               type="button"
             >
-              Submit
+              Send <span aria-hidden>→</span>
             </button>
           </div>
         </div>
 
-        <div className="border-y font-[Quicksand] md:border *:md:text-center">
-          {/* contact and location info */}
-          <div className="">
-            <div className="font-light">
-              <p>123-456-7890</p>
-              <p>info@mysite.com</p>
-              <p>1234 Street Name</p>
-              <p>San Francisco, CA 94199</p>
-            </div>
+        <div className="border-y border-[var(--color-border)] font-[Jost] font-light md:border md:text-center">
+          <div className="mb-4 space-y-1 text-sm text-[var(--color-text-muted)]">
+            <p>123-456-7890</p>
+            <p>info@mysite.com</p>
+            <p>1234 Street Name</p>
+            <p>San Francisco, CA 94199</p>
           </div>
-
-          {/* social bar */}
-          <div className="">
-            <ul className="flex gap-3 *:text-center *:text-[#053052] md:justify-center">
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-              <li>
-                <a href="#">Twitter</a>
-              </li>
-              <li>
-                <a href="#">Instagram</a>
-              </li>
-            </ul>
-          </div>
+          <ul className="flex gap-4 text-xs tracking-widest text-[var(--color-accent)] uppercase md:justify-center">
+            <li>
+              <a href="#" className="underline-sweep">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="#" className="underline-sweep">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a href="#" className="underline-sweep">
+                Instagram
+              </a>
+            </li>
+          </ul>
         </div>
-        {/* external links */}
-        <div className="font-[Quicksand] md:border-y md:border-r">
-          <ul className="flex flex-col *:underline md:text-center">
+
+        <div className="font-[Jost] md:border-y md:border-r md:border-[var(--color-border)] md:text-center">
+          <ul className="flex flex-col gap-2 text-sm text-[var(--color-text-muted)]">
             <li>
-              <a href="#">Terms of Service</a>
+              <a href="#" className="underline-sweep">
+                Terms of Service
+              </a>
             </li>
             <li>
-              <a href="#">Privacy Policy</a>
+              <a href="#" className="underline-sweep">
+                Privacy Policy
+              </a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="#" className="underline-sweep">
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* copyright */}
-      <p className="p-3 md:text-2xl">© 2023 Foo, All rights reserved.</p>
+      <p className="border-t border-[var(--color-border)] px-5 py-4 font-[Jost] text-xs font-light tracking-wide text-[var(--color-text-muted)]">
+        © 2023 Foo, All rights reserved.
+      </p>
     </footer>
   );
 };

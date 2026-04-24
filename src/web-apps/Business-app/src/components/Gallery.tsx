@@ -1,5 +1,3 @@
-import React from "react";
-
 const images = Object.values(
   import.meta.glob("../images/gallery/*.png", {
     eager: true,
@@ -8,20 +6,27 @@ const images = Object.values(
   }),
 ) as string[];
 
-const Gallery: React.FC = () => {
+const Gallery = () => {
   return (
-    <section className="min-h-screen bg-[#ece4a9] px-3">
-      <h1 className="pt-6 text-center font-[Avenir] text-3xl font-bold">
-        Gallery
-      </h1>
-      <div className="grid grid-cols-2 gap-4 py-6 sm:grid-cols-2 md:mx-auto md:w-[600px] md:grid-cols-3">
+    <section className="min-h-screen bg-[var(--color-surface)] px-4">
+      <div className="relative overflow-hidden pt-6 pb-2 text-center">
+        <span className="section-numeral absolute -top-4 left-1/2 -translate-x-1/2">
+          02
+        </span>
+        <p className="relative font-[Jost] text-xs tracking-[0.3em] text-[var(--color-accent)] uppercase">
+          Gallery
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 py-6 md:mx-auto md:w-[640px] md:grid-cols-3">
         {images.map((image, index) => (
-          <img
-            key={index + 1}
-            src={image}
-            alt={`Gallery item ${index + 1}`}
-            className="h-48 w-full border border-black object-cover"
-          />
+          <div key={index + 1} className="group overflow-hidden">
+            <img
+              src={image}
+              alt={`Gallery item ${index + 1}`}
+              className="h-48 w-full object-cover brightness-95 transition-all duration-400 group-hover:scale-[1.03] group-hover:outline group-hover:outline-1 group-hover:outline-[var(--color-accent)] group-hover:brightness-110"
+            />
+          </div>
         ))}
       </div>
     </section>
