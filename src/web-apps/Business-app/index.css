@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap");
+
 @import "tailwindcss";
 
 @font-face {
@@ -42,11 +44,102 @@
   font-style: normal;
 }
 
+/* design vars  */
+:root {
+  --color-bg: #faf8f3;
+  --color-surface: #f0e8d5;
+  --color-accent: #8a6a1e;
+  --color-accent-light: #c9a957;
+  --color-text: #1c1508;
+  --color-text-muted: #5a4f3c;
+  --color-border: rgba(138, 106, 30, 0.28);
+
+  --font-display: "Cormorant Garamond", "Avenir", Georgia, serif;
+  --font-body: "Jost", "Quicksand", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* animations */
+
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(100%);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sweepRight {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* utility class  */
+
+.section-numeral {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 13rem);
+  font-weight: 700;
+  color: var(--color-accent-light);
+  opacity: 0.12;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.04em;
+}
+
+.pull-quote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.25rem;
+  color: var(--color-text-muted);
+}
+.underline-sweep {
+  position: relative;
+  display: inline-block;
+}
+.underline-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.underline-sweep:hover::after {
+  transform: scaleX(1);
 }
