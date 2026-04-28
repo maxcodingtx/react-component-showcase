@@ -2,6 +2,10 @@
 
 A complete product catalog application with category filtering, product listing, and dynamic data management.
 
+## Live Demo
+
+[View Live Demo](https://maxjstx-product-catalog.netlify.app/)
+
 ## Technologies Used
 
 - **React** - Component framework

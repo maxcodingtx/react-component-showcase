@@ -2,6 +2,10 @@
 
 A comprehensive movie browsing application with favorites management, search functionality, and detailed movie pages using React Context and React Router.
 
+## Live Demo
+
+[View Live Demo](https://maxjstx-movie-explorer.netlify.app/)
+
 ## Technologies Used
 
 - **React Router** - Client-side routing (`react-router`)

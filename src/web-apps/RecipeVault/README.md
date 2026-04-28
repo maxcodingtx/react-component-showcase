@@ -2,6 +2,10 @@
 
 A feature-rich recipe browsing app built as a compound component demo. It showcases search and filtering, favorites with local storage, recipe details, and a simple meal planning flow using Zustand and React Router.
 
+## Live Demo
+
+[View Live Demo](https://maxjstx-recipe-vault.netlify.app/)
+
 ## Overview
 
 - `RecipeVaultMain`: Router wrapper for all pages.

@@ -2,6 +2,10 @@
 
 A mock tech conference landing page built with React, TypeScript, and Tailwind CSS v4 inside a Vite environment. This project is **design and CSS focused** — the primary goal was to create a polished, dark/techy aesthetic using modern Tailwind utility patterns.
 
+## Live Demo
+
+[View Live Demo](https://maxjstx-conference-app.netlify.app/)
+
 ### Stack
 
 - **React 19** + TypeScript
