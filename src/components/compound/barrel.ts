@@ -4,7 +4,7 @@ export { default as FontWeightSelector } from "./FontWeightSelector/FontWeightSe
 export { default as LoginForm } from "./LoginForm/LoginForm";
 export { default as NameForm } from "./NameForm/NameForm";
 export { default as UseEffectTimer } from "./UseEffectTimer/useEffectTimer";
-export { default as BlogPostContainer } from "./BlogPostContainer/BlogPostContainer";
+export { default as BlogPostContainer } from "./BlogPostContainer/BlogPostShowcase";
 export { default as HexRgbConverter } from "./HexRgbConverter";
 export { default as NavbarApp } from "./Navbar/NavbarApp";
 export { default as ZodRegisterForm } from "./ZodRegisterForm/Form";
