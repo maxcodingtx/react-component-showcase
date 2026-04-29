@@ -1,5 +1,7 @@
 # Blog Post Container Component
 
+<video src="../../../../showcase-videos/blog-showcase.mp4" controls width="600"></video>
+
 A blog post generator component that fetches random blog posts from an external API with loading states and error handling.
 
 ## Features

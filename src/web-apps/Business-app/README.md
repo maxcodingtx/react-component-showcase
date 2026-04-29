@@ -1,5 +1,7 @@
 ## Business-app
 
+<video src="../../../showcase-videos/business-app.mp4" controls width="600"></video>
+
 An app of a mock business made with react & tailwind inside a vite environment.
 
 ![Screenshot of Business-app page in 1280 width](./src/images/README-images/business-app-1280.png)
