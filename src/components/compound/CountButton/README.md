@@ -1,5 +1,7 @@
 # Count Button Component
 
+<video src="../../../../showcase-videos/count-button.mp4" controls width="600"></video>
+
 A simple counter button component that tracks and displays the number of times it has been clicked.
 
 ## Dependencies

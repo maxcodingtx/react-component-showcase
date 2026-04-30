@@ -1,5 +1,7 @@
 # BMI Calculator Component
 
+<video src="../../../../showcase-videos/bmi-calculator.mp4" controls width="600"></video>
+
 A Body Mass Index (BMI) calculator component that allows users to input their weight and height to calculate their BMI.
 
 ## Features
