@@ -4,7 +4,7 @@ import AboutPage from "./pages/about";
 import ContactPage from "./pages/contact";
 import HomePage from "./pages/home";
 
-function App() {
+function NavbarApp() {
   return (
     <div className="bg-gradient-to-r from-indigo-400 to-cyan-400">
       <BrowserRouter>
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default NavbarApp;
