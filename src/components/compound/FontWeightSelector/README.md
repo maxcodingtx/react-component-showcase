@@ -1,5 +1,7 @@
 # Font Weight Selector Component
 
+<video src="../../../../showcase-videos/font-weight-selector.mp4" controls width="600"></video>
+
 A font weight selector component that allows users to choose different font weights and see a live preview of the selected weight.
 
 ## Dependencies

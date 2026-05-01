@@ -1,5 +1,7 @@
 # Hex RGB Converter Component
 
+<video src="../../../../showcase-videos/hex-rgb-converter.mp4" controls width="600"></video>
+
 A color conversion tool that converts hexadecimal color values to RGB format with real-time preview and validation.
 
 ## Features

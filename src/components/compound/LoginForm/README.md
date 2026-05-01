@@ -1,5 +1,7 @@
 # Login Form Component
 
+<video src="../../../../showcase-videos/login-form.mp4" controls width="600"></video>
+
 A basic login form component with username and password fields and form validation.
 
 ## Features
