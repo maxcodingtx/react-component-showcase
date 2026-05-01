@@ -1,5 +1,7 @@
 # Navbar App Component
 
+<video src="../../../../showcase-videos/navbar-app.mp4" controls width="600"></video>
+
 A complete navigation application with multiple pages and a responsive navigation bar using React Router.
 
 ## Technologies Used

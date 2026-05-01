@@ -1,5 +1,7 @@
 # Name Form Component
 
+<video src="../../../../showcase-videos/name-form.mp4" controls width="600"></video>
+
 A simple name form component that captures first and last name inputs and displays the full name in real-time.
 
 ## Technologies Used
