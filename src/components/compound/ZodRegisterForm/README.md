@@ -1,5 +1,7 @@
 # Zod Register Form Component
 
+<video src="../../../../showcase-videos/zod-form.mp4" controls width="600"></video>
+
 A comprehensive registration form component with advanced form validation using Zod schema validation and React Hook Form.
 
 ## Technologies Used

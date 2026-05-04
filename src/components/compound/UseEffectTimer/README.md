@@ -1,5 +1,7 @@
 # UseEffect Timer Component
 
+<video src="../../../../showcase-videos/useEffect-timer.mp4" controls width="600"></video>
+
 A timer component that demonstrates the useEffect hook for side effects, counting seconds that have passed since component mount.
 
 ## Features
